@@ -1,0 +1,25 @@
+[
+{
+  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build",
+  "command": "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot   -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -o CMakeFiles/SETR_TP5.dir/main.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/main.c",
+  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/main.c"
+},
+
+{
+  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build",
+  "command": "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot   -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -o CMakeFiles/SETR_TP5.dir/opusUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/opusUtils.c",
+  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/opusUtils.c"
+},
+
+{
+  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build",
+  "command": "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot   -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -o CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/bluetoothServer.c",
+  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/bluetoothServer.c"
+},
+
+{
+  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build",
+  "command": "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot   -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -o CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/bluetoothClient.c",
+  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/bluetoothClient.c"
+}
+]

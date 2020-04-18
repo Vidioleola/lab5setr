@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SETR_TP5_PC",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AUDIO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AUDIO-Debug-9f72f02da16c5119e72e.json",
+					"name" : "AUDIO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SETR_TP5_PC::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SETR_TP5_PC-Debug-a7328a697ce3fda5dee4.json",
+					"name" : "SETR_TP5_PC",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
+		"source" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

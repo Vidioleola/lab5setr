@@ -1,3 +1,0 @@
-/home/vincent/VsCodeProjects/laboratoire-5/build/CMakeFiles/rebuild_cache.dir
-/home/vincent/VsCodeProjects/laboratoire-5/build/CMakeFiles/SETR_TP5.dir
-/home/vincent/VsCodeProjects/laboratoire-5/build/CMakeFiles/edit_cache.dir
