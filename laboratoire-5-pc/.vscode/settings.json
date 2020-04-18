@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+    "files.associations": {
+        "bluetoothutils.h": "c",
+        "hci.h": "c",
+        "opusutils.h": "c",
+        "errno.h": "c",
+        "includes.h": "c"
+    }
+}
