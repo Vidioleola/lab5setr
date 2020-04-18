@@ -7,7 +7,7 @@
   Compile with gcc -lbluetooth <executable> <source>
 */
 
-#include "bluetoothUtils.h"
+#include "includes.h"
 
 #define CHANNEL 4
 #define QUEUE 10

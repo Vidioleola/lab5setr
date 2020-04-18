@@ -25,7 +25,7 @@
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/AUDIO.dir/alsaUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c",
+  "command": "/bin/gcc   -g   -o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c"
 }
 ]

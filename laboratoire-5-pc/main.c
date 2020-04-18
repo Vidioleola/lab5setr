@@ -1,5 +1,4 @@
-#include "opusUtils.h"
-#include "bluetoothUtils.h"
+#include "includes.h"
 
 void *worker(void *data)
 {
@@ -131,6 +130,8 @@ int main(int argc, char **argv)
     data.delta = 0;
 
     prepareDecoding(&data, &decoder, &audio);
+    music_t music;
+    initAlsa(&music, &decoder);
 
     pthread_t threadBuffer;
     int ret = pthread_create(&threadBuffer, NULL, worker, (void *)&data);
@@ -152,6 +153,7 @@ int main(int argc, char **argv)
         }
 
         ret = decodeSignal(data.buff[data.writer], &decoder, &audio);
+        ret = playMusic(&music, &decoder);
 
         if (data.delta < TRESHOLD)
         {
@@ -163,8 +165,9 @@ int main(int argc, char **argv)
     }
     pthread_join(threadBuffer, NULL);
     printf("completed \n");
+    closePcm(&music);
     fclose(audio.fp);
-    //remove(audio.fileName);
+    remove(audio.fileName);
     free(addrName);
     free(decoder.wavData);
     return 0;

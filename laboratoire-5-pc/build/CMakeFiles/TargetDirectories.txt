@@ -1,4 +1,3 @@
-/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/edit_cache.dir
 /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/rebuild_cache.dir
 /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/SETR_TP5_PC.dir
-/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/AUDIO.dir
+/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/edit_cache.dir

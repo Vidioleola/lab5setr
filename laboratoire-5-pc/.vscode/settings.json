@@ -5,6 +5,7 @@
         "hci.h": "c",
         "opusutils.h": "c",
         "errno.h": "c",
-        "includes.h": "c"
+        "includes.h": "c",
+        "asoundlib.h": "c"
     }
 }

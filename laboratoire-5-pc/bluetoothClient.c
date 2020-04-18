@@ -1,4 +1,5 @@
-#include "bluetoothUtils.h"
+
+#include "includes.h"
 
 int initBlueClient(const char *remoteAddr, int channel, int *sock)
 {
