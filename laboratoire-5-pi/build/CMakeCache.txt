@@ -21,7 +21,7 @@ CMAKE_ADDR2LINE:FILEPATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnu
 CMAKE_AR:FILEPATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-ar
 
 //No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+CMAKE_BUILD_TYPE:STRING=Release
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler

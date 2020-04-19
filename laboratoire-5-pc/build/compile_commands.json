@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/SETR_TP5_PC.dir/main.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/main.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c"
 },
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c"
 },
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothServer.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothServer.c",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothServer.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothServer.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothServer.c"
 },
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c"
 },
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c"
 },
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -g   -o CMakeFiles/AUDIO.dir/audio.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/audio.c",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/AUDIO.dir/audio.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/audio.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/audio.c"
 }
 ]

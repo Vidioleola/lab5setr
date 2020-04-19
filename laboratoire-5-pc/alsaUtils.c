@@ -3,20 +3,20 @@
  */
 #include "includes.h"
 
-int initAlsa(music_t *music, decoder_t *decoder)
+int initAlsa(audio_t *audio, decoder_t *decoder)
 {
 	static char *device = "default"; /* playback device */
 	snd_pcm_hw_params_t *params;
 	snd_output_t *output = NULL;
 	int err;
 
-	if ((err = snd_pcm_open(&(music->handle), device, SND_PCM_STREAM_PLAYBACK, 0)) < 0)
+	if ((err = snd_pcm_open(&(audio->handle), device, SND_PCM_STREAM_PLAYBACK, 0)) < 0)
 	{
 		printf("Playback open error: %s\n", snd_strerror(err));
 		exit(EXIT_FAILURE);
 	}
 		
-	if ((err = snd_pcm_set_params(music->handle,
+	if ((err = snd_pcm_set_params(audio->handle,
 								  SND_PCM_FORMAT_S16_LE,
 								  SND_PCM_ACCESS_RW_INTERLEAVED,
 								  decoder->header->NumChannels,
@@ -31,9 +31,9 @@ int initAlsa(music_t *music, decoder_t *decoder)
 	return 0;
 }
 
-int closePcm(music_t *music)
+int closePcm(audio_t *audio)
 {
-	snd_pcm_drain(music->handle);
-	snd_pcm_close(music->handle);
+	snd_pcm_drain(audio->handle);
+	snd_pcm_close(audio->handle);
 	return 0;
 }

@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: SETR_TP5
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -53,29 +53,29 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Order-only phony target for SETR_TP5
 
-build cmake_object_order_depends_target_SETR_TP5_DEBUG: phony || CMakeFiles/SETR_TP5.dir
+build cmake_object_order_depends_target_SETR_TP5_RELEASE: phony || CMakeFiles/SETR_TP5.dir
 
-build CMakeFiles/SETR_TP5.dir/main.c.o: C_COMPILER__SETR_TP5_Debug ../main.c || cmake_object_order_depends_target_SETR_TP5_DEBUG
+build CMakeFiles/SETR_TP5.dir/main.c.o: C_COMPILER__SETR_TP5_Release ../main.c || cmake_object_order_depends_target_SETR_TP5_RELEASE
   DEP_FILE = CMakeFiles/SETR_TP5.dir/main.c.o.d
-  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer
+  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -O1
   OBJECT_DIR = CMakeFiles/SETR_TP5.dir
   OBJECT_FILE_DIR = CMakeFiles/SETR_TP5.dir
 
-build CMakeFiles/SETR_TP5.dir/opusUtils.c.o: C_COMPILER__SETR_TP5_Debug ../opusUtils.c || cmake_object_order_depends_target_SETR_TP5_DEBUG
+build CMakeFiles/SETR_TP5.dir/opusUtils.c.o: C_COMPILER__SETR_TP5_Release ../opusUtils.c || cmake_object_order_depends_target_SETR_TP5_RELEASE
   DEP_FILE = CMakeFiles/SETR_TP5.dir/opusUtils.c.o.d
-  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer
+  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -O1
   OBJECT_DIR = CMakeFiles/SETR_TP5.dir
   OBJECT_FILE_DIR = CMakeFiles/SETR_TP5.dir
 
-build CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o: C_COMPILER__SETR_TP5_Debug ../bluetoothServer.c || cmake_object_order_depends_target_SETR_TP5_DEBUG
+build CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o: C_COMPILER__SETR_TP5_Release ../bluetoothServer.c || cmake_object_order_depends_target_SETR_TP5_RELEASE
   DEP_FILE = CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o.d
-  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer
+  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -O1
   OBJECT_DIR = CMakeFiles/SETR_TP5.dir
   OBJECT_FILE_DIR = CMakeFiles/SETR_TP5.dir
 
-build CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o: C_COMPILER__SETR_TP5_Debug ../bluetoothClient.c || cmake_object_order_depends_target_SETR_TP5_DEBUG
+build CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o: C_COMPILER__SETR_TP5_Release ../bluetoothClient.c || cmake_object_order_depends_target_SETR_TP5_RELEASE
   DEP_FILE = CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o.d
-  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer
+  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -O1
   OBJECT_DIR = CMakeFiles/SETR_TP5.dir
   OBJECT_FILE_DIR = CMakeFiles/SETR_TP5.dir
 
@@ -87,8 +87,8 @@ build CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o: C_COMPILER__SETR_TP5_Debug ..
 #############################################
 # Link the executable SETR_TP5
 
-build SETR_TP5: C_EXECUTABLE_LINKER__SETR_TP5_Debug CMakeFiles/SETR_TP5.dir/main.c.o CMakeFiles/SETR_TP5.dir/opusUtils.c.o CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o
-  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -g
+build SETR_TP5: C_EXECUTABLE_LINKER__SETR_TP5_Release CMakeFiles/SETR_TP5.dir/main.c.o CMakeFiles/SETR_TP5.dir/opusUtils.c.o CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o
+  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -lopus  -lbluetooth  -lpthread
   OBJECT_DIR = CMakeFiles/SETR_TP5.dir

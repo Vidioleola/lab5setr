@@ -7,7 +7,7 @@
 
 # =============================================================================
 # Project: SETR_TP5_PC
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 # =============================================================================
 
@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__SETR_TP5_PC_Debug
+rule C_COMPILER__SETR_TP5_PC_Release
   depfile = $DEP_FILE
   deps = gcc
   command = /bin/gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
@@ -32,7 +32,7 @@ rule C_COMPILER__SETR_TP5_PC_Debug
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__SETR_TP5_PC_Debug
+rule C_EXECUTABLE_LINKER__SETR_TP5_PC_Release
   command = $PRE_LINK && /bin/gcc $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +41,7 @@ rule C_EXECUTABLE_LINKER__SETR_TP5_PC_Debug
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__AUDIO_Debug
+rule C_COMPILER__AUDIO_Release
   depfile = $DEP_FILE
   deps = gcc
   command = /bin/gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
@@ -51,7 +51,7 @@ rule C_COMPILER__AUDIO_Debug
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__AUDIO_Debug
+rule C_EXECUTABLE_LINKER__AUDIO_Release
   command = $PRE_LINK && /bin/gcc $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT

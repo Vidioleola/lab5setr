@@ -57,19 +57,17 @@ typedef struct wavfile_header_s
     int32_t Subchunk2Size;
 } wavfile_header_t;
 
-typedef struct Buffer
+typedef struct Sync
 {
     char buff[MAX_BUFFER_PACKETS][PACKETS_SIZE];
     int writer;
     int reader;
     int sock;
     int keepGoing;
-    int ready;
     int delta;
     pthread_mutex_t *lock;
     pthread_cond_t *condTooFew;
-    pthread_cond_t *condToomuch;
-}buffer_t;
+}sync_t;
 
 typedef struct Decoder
 {
@@ -86,22 +84,19 @@ typedef struct Decoder
 typedef struct AudioFile{
     const char *fileName;
     FILE *fp;
-}audio_t;
-typedef struct Music
-{
     snd_pcm_t *handle;
-} music_t;
+}audio_t;
 
 
 uchar *map_file_encode(const char *fn);
 uchar* map_file_decode(const char* fn, size_t* size);
 int decode(const char* audioFile);
 int encode(const char *audioIn, const char *audioOut);
-int prepareDecoding(buffer_t *buffer, decoder_t *decoder, audio_t *audioFile);
-int decodeSignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, music_t *music);
+int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile);
+int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, int generateDecoded);
 
 int initBlueServer(int *sock, int *client);
 int initBlueClient(const char *remoteAddr, int channel, int *sock);
 
-int initAlsa(music_t *music, decoder_t *decoder);
-int closePcm(music_t *music);
+int initAlsa(audio_t *audio, decoder_t *decoder);
+int closePcm(audio_t *audio);

@@ -3,19 +3,19 @@
 void *worker(void *data)
 {
     const char *stop = "STOP";
-    struct Buffer *d = (struct Buffer *)data;
+    sync_t *d = (sync_t *)data;
     int i;
     while (1)
     {
         pthread_mutex_lock(d->lock);
         i = read(d->sock, d->buff[d->reader], PACKETS_SIZE);
-        d->keepGoing = 1;
         if (strcmp(d->buff[d->reader], stop) == 0)
         {
             d->keepGoing = 0;
             printf("Received STOP from server \n");
             break;
         }
+        
         if (d->reader > d->writer)
         {
             d->delta = d->reader - d->writer;
@@ -24,15 +24,15 @@ void *worker(void *data)
         {
             d->delta = MAX_BUFFER_PACKETS - d->writer + d->reader;
         }
+        
         while (d->delta > MAX_PACKETS_ADVANCE)
         {
             pthread_cond_wait(d->condTooFew, d->lock);
         }
-        //printf(" worker reader : %d, writer : %d, delta : %d \n", d->reader, d->writer, d->delta);
         d->reader = (d->reader + 1) % MAX_BUFFER_PACKETS;
-        d->ready = 1;
         pthread_mutex_unlock(d->lock);
     }
+    pthread_mutex_unlock(d->lock);
     pthread_exit(0);
 }
 
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 {
     int c;
     int long_index = 0;
-    int debugFlag = 0;
+    int debugFlag, generateDecoded = 0;
     int addrFlag = 0;
     char *addrName = NULL;
     char *addrDebug = "B8:27:EB:D7:BF:66";
@@ -56,11 +56,12 @@ int main(int argc, char **argv)
     static struct option long_options[] =
         {
             /* These options set a flag. */
+            {"generateDecoded", no_argument, 0, 'g'},
             {"debug", no_argument, 0, 'z'},
             {"addr", required_argument, 0, 'a'},
             {0, 0, 0, 0}};
 
-    while ((c = getopt_long(argc, argv, "za:", long_options, &long_index)) != -1)
+    while ((c = getopt_long(argc, argv, "gza:", long_options, &long_index)) != -1)
     {
         switch (c)
         {
@@ -79,6 +80,9 @@ int main(int argc, char **argv)
             break;
         case 'z':
             debugFlag = 1;
+            break;
+        case 'g':
+            generateDecoded = 1;
             break;
         default:
             fprintf(stderr, "Unknown arg %s \n", optarg);
@@ -105,7 +109,6 @@ int main(int argc, char **argv)
     err = initBlueClient(addr, 4, &sock);
     checkErrors(err, "initBlueClient failed");
 
-    pthread_cond_t condTooMuch = PTHREAD_COND_INITIALIZER;
     pthread_cond_t condTooFew = PTHREAD_COND_INITIALIZER;
     pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
@@ -117,29 +120,25 @@ int main(int argc, char **argv)
     audio.fileName = DECODED_AUDIO_NAME;
     audio.fp = NULL;
 
-    buffer_t data;
+    sync_t data;
     data.condTooFew = &condTooFew;
-    data.condToomuch = &condTooMuch;
     data.lock = &lock;
     data.reader = 0;
     data.writer = 0;
     data.sock = sock;
     data.keepGoing = 1;
-    data.ready = 0;
     data.delta = 0;
 
     prepareDecoding(&data, &decoder, &audio);
-    music_t music;
-    initAlsa(&music, &decoder);
+    initAlsa(&audio, &decoder);
 
     pthread_t threadBuffer;
     int ret = pthread_create(&threadBuffer, NULL, worker, (void *)&data);
-    while (data.ready == 0)
-        ;
     while (data.keepGoing == 1)
     {
-        while (data.reader == data.writer)
-            ;
+        while (data.reader == data.writer && data.keepGoing == 1){
+            usleep(5); //important to keep this if doing optimizations!
+        }
         pthread_mutex_lock(data.lock);
         if (data.reader > data.writer)
         {
@@ -153,20 +152,18 @@ int main(int argc, char **argv)
         {
             pthread_cond_signal(data.condTooFew);
         }
+        decodeAndPlaySignal(data.buff[data.writer], &decoder, &audio, generateDecoded);
 
-        ret = decodeSignal(data.buff[data.writer], &decoder, &audio, &music);
-        //ret = playMusic(&music, &decoder, &audio);
-
-        //printf("reader : %d, writer : %d, delta : %d\n", data.reader, data.writer, data.delta);
         data.writer = (data.writer + 1) % MAX_BUFFER_PACKETS;
         pthread_mutex_unlock(data.lock);
     }
     pthread_join(threadBuffer, NULL);
     printf("completed \n");
-    closePcm(&music);
+    closePcm(&audio);
     fclose(audio.fp);
-    remove(audio.fileName);
     free(addrName);
     free(decoder.wavData);
+    pthread_mutex_destroy(data.lock);
+    pthread_cond_destroy(data.condTooFew);
     return 0;
 }

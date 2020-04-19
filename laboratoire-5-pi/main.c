@@ -101,11 +101,11 @@ int main(int argc, char **argv)
     err = initBlueServer(&sock, &client);
     checkErrors(err, "initBlueServer failed");
 
-    int i, k = 0;
+    int k = 0;
     FILE *fp;
     char buffer[PACKETS_SIZE];
     fp = fopen("audioEncode.out", "r");
-    i = fread(buffer, sizeof(char), sizeof(wavfile_header_t), fp);
+    fread(buffer, sizeof(char), sizeof(wavfile_header_t), fp);
     if (ferror(fp))
     {
         perror("Error reading compressed audio header (server)");
@@ -132,7 +132,7 @@ int main(int argc, char **argv)
 
     while (1)
     {
-        i = fread(buffer, sizeof(char), PACKETS_SIZE, fp);
+        fread(buffer, sizeof(char), PACKETS_SIZE, fp);
         if (ferror(fp))
         {
             perror("Error reading compressed audio (server)");

@@ -230,7 +230,7 @@ int encode(const char *audioIn, const char *audioOut)
 
     return 0;
 }
-int prepareDecoding(buffer_t *buffer, decoder_t *decoder, audio_t *audioFile)
+int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile)
 {
     ssize_t r, tr = 0;
     while ((r = read(buffer->sock, decoder->header, sizeof(wavfile_header_t) - tr)) > 0)
@@ -287,7 +287,7 @@ int prepareDecoding(buffer_t *buffer, decoder_t *decoder, audio_t *audioFile)
     return 0;
 }
 
-int decodeSignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, music_t *music)
+int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, int generateDecoded)
 {
     snd_pcm_sframes_t frames;
     for (int j = 0; j < PACKETS_SIZE; j += decoder->chunk_size)
@@ -296,16 +296,19 @@ int decodeSignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, music_t 
         if (ret <= 0)
         {
             printf("fail to decode : %d\n", ret);
-            exit(1);
+            return (1);
         }
         decoder->nReady += ret;
         // Écriture du signal encodé dans le fichier
-        //fwrite((decoder->wavData), sizeof(char), 2 * ret, audioFile->fp);
+        if (generateDecoded == 1)
+        {
+            fwrite((decoder->wavData), sizeof(char), 2 * ret, audioFile->fp);
+        }
         if (decoder->nReady >= 2 * decoder->frame_size)
         {
-            frames = snd_pcm_writei(music->handle, decoder->wavData, decoder->frame_size);
+            frames = snd_pcm_writei(audioFile->handle, decoder->wavData, decoder->frame_size);
             if (frames < 0)
-                frames = snd_pcm_recover(music->handle, frames, 0);
+                frames = snd_pcm_recover(audioFile->handle, frames, 0);
             if (frames < 0)
             {
                 printf("snd_pcm_writei failed: %s\n", snd_strerror(frames));
@@ -313,7 +316,7 @@ int decodeSignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, music_t 
             }
             if (frames > 0 && frames < (long)decoder->frame_size)
                 printf("Short write (expected %li, wrote %li)\n", (long)decoder->frame_size, frames);
-            decoder->nReady -= 2*decoder->frame_size;
+            decoder->nReady -= 2 * decoder->frame_size;
         }
     }
     return 0;
