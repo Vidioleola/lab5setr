@@ -130,7 +130,7 @@ int main(int argc, char **argv)
         printf("sending %d data (header) to client\n", written);
     }
 
-    while (1) //64octets packets
+    while (1)
     {
         i = fread(buffer, sizeof(char), PACKETS_SIZE, fp);
         if (ferror(fp))

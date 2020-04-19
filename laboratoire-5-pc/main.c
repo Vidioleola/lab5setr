@@ -33,7 +33,7 @@ void *worker(void *data)
         d->ready = 1;
         pthread_mutex_unlock(d->lock);
     }
-    exit(0);
+    pthread_exit(0);
 }
 
 void checkErrors(int err, const char *message)
@@ -115,7 +115,6 @@ int main(int argc, char **argv)
 
     audio_t audio;
     audio.fileName = DECODED_AUDIO_NAME;
-    audio.offset = 0;
     audio.fp = NULL;
 
     buffer_t data;
@@ -142,7 +141,6 @@ int main(int argc, char **argv)
         while (data.reader == data.writer)
             ;
         pthread_mutex_lock(data.lock);
-
         if (data.reader > data.writer)
         {
             data.delta = data.reader - data.writer;
@@ -151,14 +149,14 @@ int main(int argc, char **argv)
         {
             data.delta = MAX_BUFFER_PACKETS - data.writer + data.reader;
         }
-
-        ret = decodeSignal(data.buff[data.writer], &decoder, &audio);
-        ret = playMusic(&music, &decoder);
-
         if (data.delta < TRESHOLD)
         {
             pthread_cond_signal(data.condTooFew);
         }
+
+        ret = decodeSignal(data.buff[data.writer], &decoder, &audio, &music);
+        //ret = playMusic(&music, &decoder, &audio);
+
         //printf("reader : %d, writer : %d, delta : %d\n", data.reader, data.writer, data.delta);
         data.writer = (data.writer + 1) % MAX_BUFFER_PACKETS;
         pthread_mutex_unlock(data.lock);

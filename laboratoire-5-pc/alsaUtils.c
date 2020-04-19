@@ -31,21 +31,6 @@ int initAlsa(music_t *music, decoder_t *decoder)
 	return 0;
 }
 
-int playMusic(music_t *music, decoder_t *decoder)
-{
-	music->frames = snd_pcm_writei(music->handle, decoder->wavData, decoder->frame_size);
-	if (music->frames < 0)
-		music->frames = snd_pcm_recover(music->handle, music->frames, 0);
-	if (music->frames < 0)
-	{
-		printf("snd_pcm_writei failed: %s\n", snd_strerror(music->frames));
-		exit(1);
-	}
-	if (music->frames > 0 && music->frames < (long)decoder->frame_size)
-		printf("Short write (expected %li, wrote %li)\n", (long)decoder->frame_size, music->frames);
-	return 0;
-}
-
 int closePcm(music_t *music)
 {
 	snd_pcm_drain(music->handle);

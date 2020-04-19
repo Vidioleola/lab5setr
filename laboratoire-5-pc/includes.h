@@ -79,18 +79,17 @@ typedef struct Decoder
     int frame_duration_ms;
     int frame_size;
     opus_int16 *wavData;
+    opus_int16 *tmpData;
+    size_t nReady;
 } decoder_t;
 
 typedef struct AudioFile{
-    size_t offset;
     const char *fileName;
     FILE *fp;
 }audio_t;
 typedef struct Music
 {
     snd_pcm_t *handle;
-    snd_pcm_sframes_t frames;
-    snd_pcm_uframes_t frameSize;
 } music_t;
 
 
@@ -99,11 +98,10 @@ uchar* map_file_decode(const char* fn, size_t* size);
 int decode(const char* audioFile);
 int encode(const char *audioIn, const char *audioOut);
 int prepareDecoding(buffer_t *buffer, decoder_t *decoder, audio_t *audioFile);
-int decodeSignal(uchar *signal, decoder_t *decoder, audio_t *audioFile);
+int decodeSignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, music_t *music);
 
 int initBlueServer(int *sock, int *client);
 int initBlueClient(const char *remoteAddr, int channel, int *sock);
 
 int initAlsa(music_t *music, decoder_t *decoder);
-int playMusic(music_t *music, decoder_t *decoder);
 int closePcm(music_t *music);
