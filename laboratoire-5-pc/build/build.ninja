@@ -36,6 +36,18 @@ include rules.ninja
 
 
 #############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build && /usr/bin/cmake-gui -S/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc -B/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
@@ -103,17 +115,38 @@ build SETR_TP5_PC: C_EXECUTABLE_LINKER__SETR_TP5_PC_Debug CMakeFiles/SETR_TP5_PC
   TARGET_FILE = SETR_TP5_PC
   TARGET_PDB = SETR_TP5_PC.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target AUDIO
+
 
 #############################################
-# Utility command for edit_cache
+# Order-only phony target for AUDIO
 
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build && /usr/bin/cmake-gui -S/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc -B/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
+build cmake_object_order_depends_target_AUDIO_DEBUG: phony || CMakeFiles/AUDIO.dir
 
-build edit_cache: phony CMakeFiles/edit_cache.util
+build CMakeFiles/AUDIO.dir/audio.c.o: C_COMPILER__AUDIO_Debug ../audio.c || cmake_object_order_depends_target_AUDIO_DEBUG
+  DEP_FILE = CMakeFiles/AUDIO.dir/audio.c.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/AUDIO.dir
+  OBJECT_FILE_DIR = CMakeFiles/AUDIO.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target AUDIO
+
+
+#############################################
+# Link the executable AUDIO
+
+build AUDIO: C_EXECUTABLE_LINKER__AUDIO_Debug CMakeFiles/AUDIO.dir/audio.c.o
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -lasound
+  OBJECT_DIR = CMakeFiles/AUDIO.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = AUDIO
+  TARGET_PDB = AUDIO.dbg
 
 # =============================================================================
 # Target aliases.
@@ -126,7 +159,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 #############################################
 # Folder: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build
 
-build all: phony SETR_TP5_PC
+build all: phony SETR_TP5_PC AUDIO
 
 # =============================================================================
 # Unknown Build Time Dependencies.

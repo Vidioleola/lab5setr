@@ -90,6 +90,7 @@ typedef struct Music
 {
     snd_pcm_t *handle;
     snd_pcm_sframes_t frames;
+    snd_pcm_uframes_t frameSize;
 } music_t;
 
 

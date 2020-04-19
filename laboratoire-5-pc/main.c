@@ -28,7 +28,7 @@ void *worker(void *data)
         {
             pthread_cond_wait(d->condTooFew, d->lock);
         }
-        printf(" worker reader : %d, writer : %d, delta : %d \n", d->reader, d->writer, d->delta);
+        //printf(" worker reader : %d, writer : %d, delta : %d \n", d->reader, d->writer, d->delta);
         d->reader = (d->reader + 1) % MAX_BUFFER_PACKETS;
         d->ready = 1;
         pthread_mutex_unlock(d->lock);
@@ -159,7 +159,7 @@ int main(int argc, char **argv)
         {
             pthread_cond_signal(data.condTooFew);
         }
-        printf("reader : %d, writer : %d, delta : %d\n", data.reader, data.writer, data.delta);
+        //printf("reader : %d, writer : %d, delta : %d\n", data.reader, data.writer, data.delta);
         data.writer = (data.writer + 1) % MAX_BUFFER_PACKETS;
         pthread_mutex_unlock(data.lock);
     }

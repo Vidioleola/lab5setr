@@ -6,6 +6,7 @@
         "opusutils.h": "c",
         "errno.h": "c",
         "includes.h": "c",
-        "asoundlib.h": "c"
+        "asoundlib.h": "c",
+        "chrono": "c"
     }
 }
