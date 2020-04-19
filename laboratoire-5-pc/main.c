@@ -13,9 +13,10 @@ void *worker(void *data)
         {
             d->keepGoing = 0;
             printf("Received STOP from server \n");
+            pthread_mutex_unlock(d->lock);
             break;
         }
-        
+
         if (d->reader > d->writer)
         {
             d->delta = d->reader - d->writer;
@@ -24,7 +25,7 @@ void *worker(void *data)
         {
             d->delta = MAX_BUFFER_PACKETS - d->writer + d->reader;
         }
-        
+
         while (d->delta > MAX_PACKETS_ADVANCE)
         {
             pthread_cond_wait(d->condTooFew, d->lock);
@@ -32,7 +33,6 @@ void *worker(void *data)
         d->reader = (d->reader + 1) % MAX_BUFFER_PACKETS;
         pthread_mutex_unlock(d->lock);
     }
-    pthread_mutex_unlock(d->lock);
     pthread_exit(0);
 }
 
@@ -136,7 +136,8 @@ int main(int argc, char **argv)
     int ret = pthread_create(&threadBuffer, NULL, worker, (void *)&data);
     while (data.keepGoing == 1)
     {
-        while (data.reader == data.writer && data.keepGoing == 1){
+        while (data.reader == data.writer && data.keepGoing == 1)
+        {
             usleep(5); //important to keep this if doing optimizations!
         }
         pthread_mutex_lock(data.lock);
@@ -160,7 +161,7 @@ int main(int argc, char **argv)
     pthread_join(threadBuffer, NULL);
     printf("completed \n");
     closePcm(&audio);
-    fclose(audio.fp);
+    //fclose(audio.fp);
     free(addrName);
     free(decoder.wavData);
     pthread_mutex_destroy(data.lock);

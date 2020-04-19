@@ -277,6 +277,7 @@ int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile)
     printf("frame size is %d\n", decoder->frame_size);
     decoder->wavData = (opus_int16 *)malloc(decoder->frame_size * n_channels * sizeof(opus_int16));
 
+    /*
     audioFile->fp = fopen(audioFile->fileName, "w+");
     if (!audioFile->fp)
     {
@@ -284,26 +285,39 @@ int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile)
         return -1;
     }
     fwrite(decoder->header, sizeof(char), wav_header_size, audioFile->fp);
+    */
     return 0;
 }
 
 int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, int generateDecoded)
 {
     snd_pcm_sframes_t frames;
-    for (int j = 0; j < PACKETS_SIZE; j += decoder->chunk_size)
+    for (int j = 0; j < PACKETS_SIZE; j += 2*decoder->chunk_size)
     {
-        int ret = opus_decode(decoder->decoder, signal + j, decoder->chunk_size, (decoder->wavData), decoder->frame_size, 0);
-        if (ret <= 0)
+        int ret1 = opus_decode(decoder->decoder, signal + j, decoder->chunk_size,
+                              (decoder->wavData), decoder->frame_size, 0);
+        if (ret1 <= 0)
         {
-            printf("fail to decode : %d\n", ret);
+            printf("fail to decode : %d\n", ret1);
             return (1);
         }
-        decoder->nReady += ret;
+        
+        int ret2 = opus_decode(decoder->decoder, signal + j + decoder->chunk_size, decoder->chunk_size,
+                           (decoder->wavData + ret1), decoder->frame_size, 0);
+        if (ret2 <= 0)
+        {
+            printf("fail to decode : %d\n", ret2);
+            return (1);
+        }
+        
+        decoder->nReady += ret1 + ret2;
         // Écriture du signal encodé dans le fichier
+        /*
         if (generateDecoded == 1)
         {
-            fwrite((decoder->wavData), sizeof(char), 2 * ret, audioFile->fp);
+            fwrite((decoder->wavData), sizeof(opus_int16), ret1 + ret2, audioFile->fp);
         }
+        */
         if (decoder->nReady >= 2 * decoder->frame_size)
         {
             frames = snd_pcm_writei(audioFile->handle, decoder->wavData, decoder->frame_size);
