@@ -46,6 +46,45 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 
 build edit_cache: phony CMakeFiles/edit_cache.util
 
+# =============================================================================
+# Object build statements for EXECUTABLE target COMPRESS
+
+
+#############################################
+# Order-only phony target for COMPRESS
+
+build cmake_object_order_depends_target_COMPRESS_RELEASE: phony || CMakeFiles/COMPRESS.dir
+
+build CMakeFiles/COMPRESS.dir/compress.c.o: C_COMPILER__COMPRESS_Release ../compress.c || cmake_object_order_depends_target_COMPRESS_RELEASE
+  DEP_FILE = CMakeFiles/COMPRESS.dir/compress.c.o.d
+  FLAGS = -O3 -DNDEBUG
+  OBJECT_DIR = CMakeFiles/COMPRESS.dir
+  OBJECT_FILE_DIR = CMakeFiles/COMPRESS.dir
+
+build CMakeFiles/COMPRESS.dir/opusUtils.c.o: C_COMPILER__COMPRESS_Release ../opusUtils.c || cmake_object_order_depends_target_COMPRESS_RELEASE
+  DEP_FILE = CMakeFiles/COMPRESS.dir/opusUtils.c.o.d
+  FLAGS = -O3 -DNDEBUG
+  OBJECT_DIR = CMakeFiles/COMPRESS.dir
+  OBJECT_FILE_DIR = CMakeFiles/COMPRESS.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target COMPRESS
+
+
+#############################################
+# Link the executable COMPRESS
+
+build COMPRESS: C_EXECUTABLE_LINKER__COMPRESS_Release CMakeFiles/COMPRESS.dir/compress.c.o CMakeFiles/COMPRESS.dir/opusUtils.c.o
+  FLAGS = -O3 -DNDEBUG
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -lopus  -lasound
+  OBJECT_DIR = CMakeFiles/COMPRESS.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = COMPRESS
+  TARGET_PDB = COMPRESS.dbg
+
 
 #############################################
 # Utility command for rebuild_cache
@@ -153,7 +192,7 @@ build AUDIO: C_EXECUTABLE_LINKER__AUDIO_Release CMakeFiles/AUDIO.dir/audio.c.o
 #############################################
 # Folder: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build
 
-build all: phony SETR_TP5_PC AUDIO
+build all: phony COMPRESS SETR_TP5_PC AUDIO
 
 # =============================================================================
 # Unknown Build Time Dependencies.

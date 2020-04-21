@@ -37,7 +37,7 @@ int main(int argc, char **argv)
     strcpy(ret.audioFile, "./music/");
     struct sockaddr_rc addr;
     //asking what does the client wants
-    initBlueServer(&sock, &client, &addr);
+    initBlueServer(&sock, &addr);
     while (ret.success == 0)
     {
         waitForConnection(&sock, &client, &addr);

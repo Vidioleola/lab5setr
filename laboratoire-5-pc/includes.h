@@ -26,11 +26,14 @@
 #include <bluetooth/hci.h>
 
 
-#define PACKETS_SIZE 108
+#define PACKETS_SIZE 160
 #define MAX_BUFFER_PACKETS 64
 #define MAX_PACKETS_ADVANCE 48
 #define TRESHOLD 24
 #define DECODED_AUDIO_NAME "decodedAudio.wav"
+
+#define CHUNK 80
+#define BIT_RATE 128000
 
 typedef unsigned char uchar;
 
@@ -90,7 +93,7 @@ typedef struct AudioFile{
 
 uchar *map_file_encode(const char *fn);
 uchar* map_file_decode(const char* fn, size_t* size);
-int decode(const char* audioFile);
+int decode(const char* audioFile, const char *audioOut);
 int encode(const char *audioIn, const char *audioOut);
 int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile);
 int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, int generateDecoded);

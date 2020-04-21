@@ -1,6 +1,18 @@
 [
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/COMPRESS.dir/compress.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/compress.c",
+  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/compress.c"
+},
+
+{
+  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
+  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/COMPRESS.dir/opusUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c",
+  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c"
+},
+
+{
+  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
   "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/main.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c"
 },

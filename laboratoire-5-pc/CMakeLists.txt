@@ -11,3 +11,6 @@ TARGET_LINK_LIBRARIES(SETR_TP5_PC asound)
 
 add_executable(AUDIO audio.c)
 TARGET_LINK_LIBRARIES(AUDIO asound)
+
+add_executable(COMPRESS compress.c opusUtils.c)
+TARGET_LINK_LIBRARIES(COMPRESS opus asound)

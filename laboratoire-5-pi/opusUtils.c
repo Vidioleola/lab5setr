@@ -83,7 +83,7 @@ int decode(const char *audioFile)
     // On sauvegarde le header wav.
     fwrite(header, 1, wav_header_size, fp);
     reading_end += wav_header_size; // On skip le header pour débuter l'encodage
-    opus_int32 chunk_size = 18;
+    opus_int32 chunk_size = CHUNK;
     int frame_duration_ms = 5;
     int frame_size = sample_rate / 1000 * frame_duration_ms;
     opus_int16 *buffer = (opus_int16 *)malloc(frame_size * n_channels * sizeof(opus_int16));
@@ -162,7 +162,7 @@ int encode(const char *audioIn, const char *audioOut)
 
     /* paramètres de l'encodeur */
     // Bitrate du signal encodé : Vous devez trouver le meilleur compromis qualité/transmission.
-    ret = opus_encoder_ctl(encoder, OPUS_SET_BITRATE(28000));
+    ret = opus_encoder_ctl(encoder, OPUS_SET_BITRATE(BIT_RATE));
     if (ret != 0)
     {
         printf("fail to set bitrate");

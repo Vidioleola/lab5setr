@@ -12,7 +12,7 @@
 #define CHANNEL 4
 #define QUEUE 10
 
-int initBlueServer(int *sock, int *client, struct sockaddr_rc *addr)
+int initBlueServer(int *sock,struct sockaddr_rc *addr)
 {
   unsigned int alen;
 
@@ -150,7 +150,7 @@ int playAudioFile(int client, ret_t *ret)
   
   fp = fopen(ret->audioFile, "r");
   if(fp == NULL){
-    printf("Error openning audio file %s");
+    printf("Error openning audio file");
     return 1;
   }
   fread(buffer, sizeof(char), sizeof(wavfile_header_t), fp);

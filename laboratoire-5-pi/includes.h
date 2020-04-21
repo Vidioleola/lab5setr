@@ -26,7 +26,9 @@
 
 
 
-#define PACKETS_SIZE 108
+#define PACKETS_SIZE 160
+#define CHUNK 80
+#define BIT_RATE 128000
 
 typedef struct Ret{
     int requestType;
@@ -65,7 +67,7 @@ uchar* map_file_decode(const char* fn, size_t* size);
 int decode(const char* audioFile);
 int encode(const char *audioIn, const char *audioOut);
 
-int initBlueServer(int *sock, int *client, struct sockaddr_rc *addr);
+int initBlueServer(int *sock, struct sockaddr_rc *addr);
 int serveClient(int *client, ret_t *ret);
 int listAudioFiles(const char* dir, int client);
 int playAudioFile(int client, ret_t *ret);

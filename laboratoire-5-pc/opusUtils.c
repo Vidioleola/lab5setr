@@ -35,7 +35,7 @@ uchar *map_file_decode(const char *fn, size_t *size)
     return ptr;
 }
 
-int decode(const char *audioFile)
+int decode(const char *audioFile, const char*audioOut)
 {
     int ret;
     size_t file_size = 0;
@@ -74,7 +74,7 @@ int decode(const char *audioFile)
     }
 
     // Fichier de sortie qui va contenir le signal décodé (WAV).
-    FILE *fp = fopen("decoded.wav", "w");
+    FILE *fp = fopen(audioOut, "w");
     if (!fp)
     {
         printf("fail to open file decoded.wav");
@@ -83,7 +83,7 @@ int decode(const char *audioFile)
     // On sauvegarde le header wav.
     fwrite(header, 1, wav_header_size, fp);
     reading_end += wav_header_size; // On skip le header pour débuter l'encodage
-    opus_int32 chunk_size = 18;
+    opus_int32 chunk_size = CHUNK;
     int frame_duration_ms = 5;
     int frame_size = sample_rate / 1000 * frame_duration_ms;
     opus_int16 *buffer = (opus_int16 *)malloc(frame_size * n_channels * sizeof(opus_int16));
@@ -160,7 +160,8 @@ int encode(const char *audioIn, const char *audioOut)
 
     /* paramètres de l'encodeur */
     // Bitrate du signal encodé : Vous devez trouver le meilleur compromis qualité/transmission.
-    ret = opus_encoder_ctl(encoder, OPUS_SET_BITRATE(28000));
+    ret = opus_encoder_ctl(encoder, OPUS_SET_BITRATE(BIT_RATE)); //you MUST change the chunk_size in decode depending of value.
+    //ex : with 28000 chunk is 18, with 64000 it's 40.
     if (ret != 0)
     {
         printf("fail to set bitrate");
@@ -201,7 +202,7 @@ int encode(const char *audioIn, const char *audioOut)
     fwrite(header, 1, wav_header_size, fp);
     reading_end += wav_header_size; // On skip le header pour débuter l'encodage
 
-    int max_data_size = 100; // Nombre maximal de byte encodé par frame
+    int max_data_size = 200; // Nombre maximal de byte encodé par frame
     uchar *buffer = (uchar *)malloc(max_data_size);
     int frame_duration_ms = 5; // Une durée plus grande que 10 ms va introduire énormément de bruit dans un signal musical.
     int frame_size = sample_rate / 1000 * frame_duration_ms;
@@ -220,6 +221,7 @@ int encode(const char *audioIn, const char *audioOut)
         // Incrémente le pointeur
         reading_end += frame_size;
     }
+    printf("ret : %d\n", ret);
     clock_t end_time = clock();
     double time_spent = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("encoding opus done in %f sec\n", time_spent);
@@ -271,11 +273,11 @@ int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile)
         printf("fail to init %d", ret);
         return 1;
     }
-    decoder->chunk_size = 18;
+    decoder->chunk_size = CHUNK;
     decoder->frame_duration_ms = 5;
     decoder->frame_size = sample_rate / 1000 * decoder->frame_duration_ms;
     printf("frame size is %d\n", decoder->frame_size);
-    decoder->wavData = (opus_int16 *)malloc(decoder->frame_size * n_channels * sizeof(opus_int16));
+    decoder->wavData = (opus_int16 *)malloc(100 * decoder->frame_size * n_channels * sizeof(opus_int16));
 
     /*
     audioFile->fp = fopen(audioFile->fileName, "w+");
@@ -299,7 +301,8 @@ int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, i
         if (ret1 <= 0)
         {
             printf("fail to decode : %d\n", ret1);
-            return (1);
+            printf("chunck is : %d\n", decoder->chunk_size);
+            exit (1);
         }
         
         int ret2 = opus_decode(decoder->decoder, signal + j + decoder->chunk_size, decoder->chunk_size,
@@ -307,7 +310,7 @@ int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, i
         if (ret2 <= 0)
         {
             printf("fail to decode : %d\n", ret2);
-            return (1);
+            exit (1);
         }
         
         decoder->nReady += ret1 + ret2;
