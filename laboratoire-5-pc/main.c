@@ -49,9 +49,10 @@ int main(int argc, char **argv)
     int c;
     int long_index = 0;
     int debugFlag, generateDecoded, listFiles = 0;
-    int addrFlag = 0;
+    int addrFlag, audioFileNameFlag = 0;
     char *addrName = NULL;
     char *addrDebug = "B8:27:EB:D7:BF:66";
+    char audioFileName[256];
     int err = 0;
     static struct option long_options[] =
         {
@@ -60,9 +61,10 @@ int main(int argc, char **argv)
             {"debug", no_argument, 0, 'z'},
             {"list", no_argument, 0, 'l'},
             {"addr", required_argument, 0, 'a'},
+            {"source", required_argument, 0, 's'},
             {0, 0, 0, 0}};
 
-    while ((c = getopt_long(argc, argv, "gzla:", long_options, &long_index)) != -1)
+    while ((c = getopt_long(argc, argv, "gzla:s:", long_options, &long_index)) != -1)
     {
         switch (c)
         {
@@ -72,6 +74,18 @@ int main(int argc, char **argv)
                 addrName = (char *)malloc((strlen(optarg) + 1) * sizeof(char));
                 strcpy(addrName, optarg);
                 addrFlag = 1;
+            }
+            else
+            {
+                printf("missing addr name with -a\n");
+                return 1;
+            }
+            break;
+        case 's':
+            if (optarg)
+            {
+                strcpy(audioFileName, optarg);
+                audioFileNameFlag = 1;
             }
             else
             {
@@ -124,6 +138,11 @@ int main(int argc, char **argv)
         return 0;
     }
 
+    if(audioFileNameFlag != 1){
+        printf("You must select an audioFile. Use -l to list\n");
+        return 1;
+    }
+
     pthread_cond_t condTooFew = PTHREAD_COND_INITIALIZER;
     pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
@@ -144,13 +163,18 @@ int main(int argc, char **argv)
     data.keepGoing = 1;
     data.delta = 0;
 
+    //ask an audioFile
     write(sock, "PLAY", 5);
+    write(sock, audioFileName, 256);
 
     prepareDecoding(&data, &decoder, &audio);
     initAlsa(&audio, &decoder);
 
+    //this thread reads as fast as possible
     pthread_t threadBuffer;
     int ret = pthread_create(&threadBuffer, NULL, worker, (void *)&data);
+
+    //main loop to decode and play audio
     while (data.keepGoing == 1)
     {
         while (data.reader == data.writer && data.keepGoing == 1)
@@ -178,7 +202,6 @@ int main(int argc, char **argv)
     pthread_join(threadBuffer, NULL);
     printf("completed \n");
     closePcm(&audio);
-    //fclose(audio.fp);
     if (addrFlag == 1)
     {
         free(addrName);

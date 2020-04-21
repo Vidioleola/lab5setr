@@ -3,6 +3,9 @@
         "bluetoothutils.h": "c",
         "hci.h": "c",
         "cstring": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "opusutils.h": "c",
+        "includes.h": "c",
+        "opus.h": "c"
     }
 }

@@ -311,13 +311,7 @@ int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, i
         }
         
         decoder->nReady += ret1 + ret2;
-        // Écriture du signal encodé dans le fichier
-        /*
-        if (generateDecoded == 1)
-        {
-            fwrite((decoder->wavData), sizeof(opus_int16), ret1 + ret2, audioFile->fp);
-        }
-        */
+
         if (decoder->nReady >= 2 * decoder->frame_size)
         {
             frames = snd_pcm_writei(audioFile->handle, decoder->wavData, decoder->frame_size);

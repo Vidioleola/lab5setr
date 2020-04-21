@@ -40,13 +40,6 @@ int initBlueClient(const char *remoteAddr, int channel, int *sock)
         perror("connect to remote addr");
         exit(1);
     }
-    /*
-    printf("sending data to %d \n", *sock);
-    if(send(*sock,"allo", 6, 0) < 0) {
-        perror("sending to server");
-        exit(1);
-    }
-    */
 
     return 0;
 }

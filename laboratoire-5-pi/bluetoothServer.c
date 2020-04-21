@@ -7,7 +7,7 @@
   Compile with gcc -lbluetooth <executable> <source>
 */
 
-#include "bluetoothUtils.h"
+#include "includes.h"
 
 #define CHANNEL 4
 #define QUEUE 10
@@ -32,21 +32,13 @@ int initBlueServer(int *sock, int *client, struct sockaddr_rc *addr)
     perror("bind");
     exit(1);
   }
-
-  listen(*sock, QUEUE);
-  printf("Waiting for connections...\n\n");
-
-  if ((*client = accept(*sock, (struct sockaddr *)addr, &alen)) < 0)
-  {
-    printf("connection failed \n");
-    exit(1);
-  }
   return 0;
 }
 
-int serveClient(int *client, int *ret)
+int serveClient(int *client, ret_t *ret)
 {
   char msg[5];
+  char buff[256];
   ssize_t i = read(*client, msg, 5);
   if (i < 0)
   {
@@ -57,11 +49,23 @@ int serveClient(int *client, int *ret)
 
   if (strcmp(msg, "LIST") == 0)
   {
-    *ret = 0;
+    ret->requestType = 0;
   }
   else if (strcmp(msg, "PLAY") == 0)
   {
-    *ret = 1;
+    ret->requestType = 1;
+    i = read(*client, buff, 256);
+    if (i < 0)
+    {
+      perror("Error reading client file request");
+      close(*client);
+      return (1);
+    }
+    strcat(ret->audioFile, buff); //append to ./music/
+  }
+  else if (strcmp(msg, "FILT") == 0)
+  {
+    ret->requestType = 2;
   }
   else
   {
@@ -126,7 +130,7 @@ int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr)
 {
   unsigned int alen;
   alen = sizeof(*addr);
-  
+
   listen(*sock, QUEUE);
   printf("Waiting for connections...\n\n");
 
@@ -135,5 +139,82 @@ int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr)
     printf("connection failed \n");
     exit(1);
   }
+  return 0;
+}
+int playAudioFile(int client, ret_t *ret)
+{
+
+  int k = 0;
+  FILE *fp;
+  char buffer[PACKETS_SIZE];
+  
+  fp = fopen(ret->audioFile, "r");
+  if(fp == NULL){
+    printf("Error openning audio file %s");
+    return 1;
+  }
+  fread(buffer, sizeof(char), sizeof(wavfile_header_t), fp);
+  if (ferror(fp))
+  {
+    perror("Error reading compressed audio header (server)");
+    exit(1);
+  }
+  if (feof(fp))
+  {
+    perror("Reached EOF while reading audio header (server)");
+    exit(1);
+  }
+  //sending header
+  size_t totalWritten = 0;
+  int written = 0;
+  while (totalWritten < sizeof(wavfile_header_t))
+  {
+    written = write(client, buffer, sizeof(wavfile_header_t) - totalWritten);
+    if (written < 0)
+    {
+      perror("writing header to client socket");
+      exit(1);
+    }
+    totalWritten += written;
+    printf("sending %d data (header) to client\n", written);
+  }
+  //sending data
+  while (1)
+  {
+    fread(buffer, sizeof(char), PACKETS_SIZE, fp);
+    if (ferror(fp))
+    {
+      perror("Error reading compressed audio (server)");
+      exit(1);
+    }
+    if (feof(fp))
+    {
+      break;
+    }
+
+    totalWritten = 0;
+    written = 0;
+    while (totalWritten < PACKETS_SIZE)
+    {
+      written = write(client, buffer, PACKETS_SIZE - totalWritten);
+      if (written < 0)
+      {
+        perror("writing to client socket");
+        exit(1);
+      }
+      totalWritten += written;
+      printf("sending %d data to client\n", written);
+    }
+    k++;
+  }
+  printf("EOF audio reached at iteration %d \n", k);
+  //sending stop...
+  write(client, "STOP", 5);
+  close(client);
+  ret->success = 1;
+  return 0;
+}
+int selectFilter(ret_t *ret)
+{
   return 0;
 }
