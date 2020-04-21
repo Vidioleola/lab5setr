@@ -11,5 +11,7 @@
 
 # include "includes.h"
 
-int initBlueServer(int *sock, int *client);
-int initBlueClient(const char *remoteAddr, int channel, int *sock);
+int initBlueServer(int *sock, int *client, struct sockaddr_rc *addr);
+int serveClient(int *client, int *ret);
+int listAudioFiles(const char* dir, int client);
+int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr);

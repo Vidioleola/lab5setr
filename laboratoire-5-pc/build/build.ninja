@@ -79,12 +79,6 @@ build CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o: C_COMPILER__SETR_TP5_PC_Release 
   OBJECT_DIR = CMakeFiles/SETR_TP5_PC.dir
   OBJECT_FILE_DIR = CMakeFiles/SETR_TP5_PC.dir
 
-build CMakeFiles/SETR_TP5_PC.dir/bluetoothServer.c.o: C_COMPILER__SETR_TP5_PC_Release ../bluetoothServer.c || cmake_object_order_depends_target_SETR_TP5_PC_RELEASE
-  DEP_FILE = CMakeFiles/SETR_TP5_PC.dir/bluetoothServer.c.o.d
-  FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = CMakeFiles/SETR_TP5_PC.dir
-  OBJECT_FILE_DIR = CMakeFiles/SETR_TP5_PC.dir
-
 build CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o: C_COMPILER__SETR_TP5_PC_Release ../bluetoothClient.c || cmake_object_order_depends_target_SETR_TP5_PC_RELEASE
   DEP_FILE = CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o.d
   FLAGS = -O3 -DNDEBUG
@@ -105,7 +99,7 @@ build CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o: C_COMPILER__SETR_TP5_PC_Release 
 #############################################
 # Link the executable SETR_TP5_PC
 
-build SETR_TP5_PC: C_EXECUTABLE_LINKER__SETR_TP5_PC_Release CMakeFiles/SETR_TP5_PC.dir/main.c.o CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o CMakeFiles/SETR_TP5_PC.dir/bluetoothServer.c.o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o
+build SETR_TP5_PC: C_EXECUTABLE_LINKER__SETR_TP5_PC_Release CMakeFiles/SETR_TP5_PC.dir/main.c.o CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -lopus  -lbluetooth  -lpthread  -lasound

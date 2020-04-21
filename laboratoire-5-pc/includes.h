@@ -95,8 +95,8 @@ int encode(const char *audioIn, const char *audioOut);
 int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile);
 int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, int generateDecoded);
 
-int initBlueServer(int *sock, int *client);
 int initBlueClient(const char *remoteAddr, int channel, int *sock);
+int listAudioFiles(int sock);
 
 int initAlsa(audio_t *audio, decoder_t *decoder);
 int closePcm(audio_t *audio);

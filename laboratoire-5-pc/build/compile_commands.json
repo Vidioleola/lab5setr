@@ -13,12 +13,6 @@
 
 {
   "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothServer.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothServer.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothServer.c"
-},
-
-{
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
   "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c",
   "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c"
 },

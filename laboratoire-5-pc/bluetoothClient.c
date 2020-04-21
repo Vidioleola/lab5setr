@@ -1,6 +1,8 @@
 
 #include "includes.h"
 
+#define MAX_FILE_NAME_LEN 256
+
 int initBlueClient(const char *remoteAddr, int channel, int *sock)
 {
     struct sockaddr_rc laddr, raddr;
@@ -49,19 +51,51 @@ int initBlueClient(const char *remoteAddr, int channel, int *sock)
     return 0;
 }
 
-int sendData(int sock, const char *data, size_t len)
+int listAudioFiles(int sock)
 {
-    ssize_t ret;
-    size_t sended = 0;
-    while (sended < len)
+    char buffer[MAX_FILE_NAME_LEN];
+    char **files = NULL;
+    char message[] = "LIST";
+    ssize_t len = strlen(message) + 1;
+    ssize_t totalWritten = 0;
+    ssize_t written = 0;
+    ssize_t ret = 0;
+    size_t numberOfFiles, fileCounter = 0;
+    while (totalWritten < len)
     {
-        ret = send(sock, data, len - sended, 0);
-        if (ret < 0)
+        written = write(sock, message, len - totalWritten);
+        if (written < 0)
         {
-            perror("sending data to server failed");
+            perror("writing to client socket");
             exit(1);
         }
-        sended += ret;
+        totalWritten += written;
+        printf("sending LIST to client\n");
     }
+    ret = read(sock, &numberOfFiles, sizeof(size_t));
+    printf("have number of file : %d\n", numberOfFiles);
+    if (ret < 0)
+    {
+        perror("Error reading number of files");
+        exit(1);
+    }
+    files = (char **)malloc(numberOfFiles * sizeof(char *));
+    for (int i = 0; i < numberOfFiles; i++)
+    {
+        files[i] = (char *)malloc(MAX_FILE_NAME_LEN * sizeof(char));
+    }
+    while (fileCounter < numberOfFiles)
+    {
+        ret = read(sock, buffer, MAX_FILE_NAME_LEN);
+        memcpy(files[fileCounter++], buffer, MAX_FILE_NAME_LEN);
+    }
+    printf("Audio files availaible : \n");
+    for (int i = 0; i  < numberOfFiles; i++)
+    {
+        printf("%s\n", files[i]);
+        free(files[i]);
+    }
+    printf("_________________________\n");
+    free(files);
     return 0;
 }

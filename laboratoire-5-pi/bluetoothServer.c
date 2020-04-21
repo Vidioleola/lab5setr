@@ -12,10 +12,9 @@
 #define CHANNEL 4
 #define QUEUE 10
 
-int initBlueServer(int *sock, int *client)
+int initBlueServer(int *sock, int *client, struct sockaddr_rc *addr)
 {
   unsigned int alen;
-  struct sockaddr_rc addr;
 
   if ((*sock = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM)) < 0)
   {
@@ -23,12 +22,12 @@ int initBlueServer(int *sock, int *client)
     exit(1);
   }
 
-  addr.rc_family = AF_BLUETOOTH;
-  bacpy(&addr.rc_bdaddr, BDADDR_ANY);
-  addr.rc_channel = htobs(CHANNEL);
-  alen = sizeof(addr);
+  addr->rc_family = AF_BLUETOOTH;
+  bacpy(&addr->rc_bdaddr, BDADDR_ANY);
+  addr->rc_channel = htobs(CHANNEL);
+  alen = sizeof(*addr);
 
-  if (bind(*sock, (struct sockaddr *)&addr, alen) < 0)
+  if (bind(*sock, (struct sockaddr *)addr, alen) < 0)
   {
     perror("bind");
     exit(1);
@@ -36,18 +35,105 @@ int initBlueServer(int *sock, int *client)
 
   listen(*sock, QUEUE);
   printf("Waiting for connections...\n\n");
-  
-  if ((*client = accept(*sock, (struct sockaddr *)&addr, &alen)) < 0)
+
+  if ((*client = accept(*sock, (struct sockaddr *)addr, &alen)) < 0)
   {
     printf("connection failed \n");
     exit(1);
   }
-  /*
-  printf("connection sucessful with client %d and server sock : %d \n", *client, *sock);
-  //write(*client, "12345678", 9);
-  char buffer[6];
-  read(*client, buffer, 6);
-  printf("data is : %s \n", buffer);
-  */
+  return 0;
+}
+
+int serveClient(int *client, int *ret)
+{
+  char msg[5];
+  ssize_t i = read(*client, msg, 5);
+  if (i < 0)
+  {
+    perror("Error reading client request");
+    close(*client);
+    return (1);
+  }
+
+  if (strcmp(msg, "LIST") == 0)
+  {
+    *ret = 0;
+  }
+  else if (strcmp(msg, "PLAY") == 0)
+  {
+    *ret = 1;
+  }
+  else
+  {
+    perror("Unknown request from client");
+    close(*client);
+    return (1);
+  }
+
+  return 0;
+}
+int listAudioFiles(const char *dir, int client)
+{
+  struct dirent *de; // Pointer for directory entry
+  size_t count = 0;
+
+  // opendir() returns a pointer of DIR type.
+  DIR *dr = opendir(dir);
+
+  if (dr == NULL) // opendir returns NULL if couldn't open directory
+  {
+    printf("Could not open directory %s\n", dir);
+    exit(1);
+  }
+
+  while ((de = readdir(dr)) != NULL)
+  {
+    if (strcmp(de->d_name, ".") != 0 && strcmp(de->d_name, ".."))
+    {
+      count++;
+    }
+  }
+  closedir(dr);
+  write(client, &count, sizeof(size_t));
+  dr = opendir(dir);
+  while ((de = readdir(dr)) != NULL)
+  {
+    if (strcmp(de->d_name, ".") != 0 && strcmp(de->d_name, ".."))
+    {
+      ssize_t totalWritten = 0;
+      ssize_t written = 0;
+      ssize_t len = 256;
+      while (totalWritten < len)
+      {
+        written = write(client, de->d_name, len - totalWritten);
+        if (written < 0)
+        {
+          perror("writing to client socket");
+          closedir(dr);
+          return (1);
+        }
+        totalWritten += written;
+        printf("sending dir content %s to client\n", de->d_name);
+      }
+    }
+  }
+  closedir(dr);
+  close(client);
+  return 0;
+}
+
+int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr)
+{
+  unsigned int alen;
+  alen = sizeof(*addr);
+  
+  listen(*sock, QUEUE);
+  printf("Waiting for connections...\n\n");
+
+  if ((*client = accept(*sock, (struct sockaddr *)addr, &alen)) < 0)
+  {
+    printf("connection failed \n");
+    exit(1);
+  }
   return 0;
 }

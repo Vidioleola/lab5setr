@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "bluetoothutils.h": "c",
+        "hci.h": "c",
+        "cstring": "cpp",
+        "typeinfo": "cpp"
+    }
+}

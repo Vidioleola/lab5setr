@@ -6,14 +6,6 @@
 
 #define PACKETS_SIZE 108
 
-void checkErrors(int err, const char *message)
-{
-    if (err)
-    {
-        fprintf(stderr, "Error %d : %s \n", err, message);
-    }
-}
-
 int main(int argc, char **argv)
 {
     int c;
@@ -23,7 +15,8 @@ int main(int argc, char **argv)
     char *filterName = NULL;
     int sourceName = 0;
     int err = 0;
-    char *audioFileInDebug = "haba.wav";
+    const char *audioFileInDebug = "haba.wav";
+    const char *audioFilesDir = "./music";
     char *audioFileIn = NULL;
     static struct option long_options[] =
         {
@@ -95,15 +88,33 @@ int main(int argc, char **argv)
     {
         err = encode(audioFileIn, "audioEncode.out");
     }
-    checkErrors(err, "Encode failed");
-
-    int client, sock;
-    err = initBlueServer(&sock, &client);
-    checkErrors(err, "initBlueServer failed");
 
     int k = 0;
     FILE *fp;
     char buffer[PACKETS_SIZE];
+    int client, sock, ret;
+    struct sockaddr_rc addr;
+    //asking what does the client wants
+    err = initBlueServer(&sock, &client, &addr);
+    while (1)
+    {
+        err = serveClient(&client, &ret);
+        switch (ret)
+        {
+        case 0:
+            listAudioFiles(audioFilesDir, client);
+            break;
+        case 1:
+            goto sendAudio;
+            break;
+        default:
+            perror("unknown ret from serveClient");
+            exit(1);
+            break;
+        }
+        waitForConnection(&sock, &client, &addr);
+    }
+sendAudio:
     fp = fopen("audioEncode.out", "r");
     fread(buffer, sizeof(char), sizeof(wavfile_header_t), fp);
     if (ferror(fp))
@@ -116,6 +127,7 @@ int main(int argc, char **argv)
         perror("Reached EOF while reading audio header (server)");
         exit(1);
     }
+    //sending header
     size_t totalWritten = 0;
     int written = 0;
     while (totalWritten < sizeof(wavfile_header_t))
@@ -129,7 +141,7 @@ int main(int argc, char **argv)
         totalWritten += written;
         printf("sending %d data (header) to client\n", written);
     }
-
+    //sending data
     while (1)
     {
         fread(buffer, sizeof(char), PACKETS_SIZE, fp);
@@ -159,6 +171,7 @@ int main(int argc, char **argv)
         k++;
     }
     printf("EOF audio reached at iteration %d \n", k);
+    //sending stop...
     write(client, "STOP", 5);
     close(client);
     close(sock);

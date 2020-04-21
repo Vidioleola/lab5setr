@@ -73,12 +73,6 @@ build CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o: C_COMPILER__SETR_TP5_Release 
   OBJECT_DIR = CMakeFiles/SETR_TP5.dir
   OBJECT_FILE_DIR = CMakeFiles/SETR_TP5.dir
 
-build CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o: C_COMPILER__SETR_TP5_Release ../bluetoothClient.c || cmake_object_order_depends_target_SETR_TP5_RELEASE
-  DEP_FILE = CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o.d
-  FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG   -Wall -Wextra -Wpedantic -Wduplicated-cond -Wlogical-op -Wnull-dereference -Wjump-misses-init -Wshadow -fno-omit-frame-pointer -O1
-  OBJECT_DIR = CMakeFiles/SETR_TP5.dir
-  OBJECT_FILE_DIR = CMakeFiles/SETR_TP5.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SETR_TP5
@@ -87,7 +81,7 @@ build CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o: C_COMPILER__SETR_TP5_Release 
 #############################################
 # Link the executable SETR_TP5
 
-build SETR_TP5: C_EXECUTABLE_LINKER__SETR_TP5_Release CMakeFiles/SETR_TP5.dir/main.c.o CMakeFiles/SETR_TP5.dir/opusUtils.c.o CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o CMakeFiles/SETR_TP5.dir/bluetoothClient.c.o
+build SETR_TP5: C_EXECUTABLE_LINKER__SETR_TP5_Release CMakeFiles/SETR_TP5.dir/main.c.o CMakeFiles/SETR_TP5.dir/opusUtils.c.o CMakeFiles/SETR_TP5.dir/bluetoothServer.c.o
   FLAGS = -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib -O3 -DNDEBUG
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -lopus  -lbluetooth  -lpthread

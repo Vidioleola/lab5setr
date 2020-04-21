@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 {
     int c;
     int long_index = 0;
-    int debugFlag, generateDecoded = 0;
+    int debugFlag, generateDecoded, listFiles = 0;
     int addrFlag = 0;
     char *addrName = NULL;
     char *addrDebug = "B8:27:EB:D7:BF:66";
@@ -58,10 +58,11 @@ int main(int argc, char **argv)
             /* These options set a flag. */
             {"generateDecoded", no_argument, 0, 'g'},
             {"debug", no_argument, 0, 'z'},
+            {"list", no_argument, 0, 'l'},
             {"addr", required_argument, 0, 'a'},
             {0, 0, 0, 0}};
 
-    while ((c = getopt_long(argc, argv, "gza:", long_options, &long_index)) != -1)
+    while ((c = getopt_long(argc, argv, "gzla:", long_options, &long_index)) != -1)
     {
         switch (c)
         {
@@ -83,6 +84,9 @@ int main(int argc, char **argv)
             break;
         case 'g':
             generateDecoded = 1;
+            break;
+        case 'l':
+            listFiles = 1;
             break;
         default:
             fprintf(stderr, "Unknown arg %s \n", optarg);
@@ -109,6 +113,17 @@ int main(int argc, char **argv)
     err = initBlueClient(addr, 4, &sock);
     checkErrors(err, "initBlueClient failed");
 
+    if (listFiles == 1)
+    {
+        listAudioFiles(sock);
+        if (addrFlag == 1)
+        {
+            free(addrName);
+        }
+
+        return 0;
+    }
+
     pthread_cond_t condTooFew = PTHREAD_COND_INITIALIZER;
     pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
@@ -128,6 +143,8 @@ int main(int argc, char **argv)
     data.sock = sock;
     data.keepGoing = 1;
     data.delta = 0;
+
+    write(sock, "PLAY", 5);
 
     prepareDecoding(&data, &decoder, &audio);
     initAlsa(&audio, &decoder);
@@ -162,7 +179,10 @@ int main(int argc, char **argv)
     printf("completed \n");
     closePcm(&audio);
     //fclose(audio.fp);
-    free(addrName);
+    if (addrFlag == 1)
+    {
+        free(addrName);
+    }
     free(decoder.wavData);
     pthread_mutex_destroy(data.lock);
     pthread_cond_destroy(data.condTooFew);
