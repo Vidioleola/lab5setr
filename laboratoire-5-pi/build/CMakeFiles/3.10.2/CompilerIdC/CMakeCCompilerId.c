@@ -570,8 +570,7 @@ void main() {}
 int main(argc, argv) int argc; char *argv[];
 # else
 int main(int argc, char* argv[])
-# endif
-{
+# endif{
   int require = 0;
   require += info_compiler[argc];
   require += info_platform[argc];

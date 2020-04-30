@@ -66,8 +66,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-		"source" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc"
+		"build" : "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+		"source" : "/home/epepi/setr/lab5setr/laboratoire-5-pc"
 	},
 	"version" : 
 	{

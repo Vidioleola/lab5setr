@@ -300,7 +300,7 @@ int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, i
                               (decoder->wavData), decoder->frame_size, 0);
         if (ret1 <= 0)
         {
-            printf("fail to decode : %d\n", ret1);
+            printf("failed to decode : %d\n", ret1);
             printf("chunck is : %d\n", decoder->chunk_size);
             exit (1);
         }
@@ -309,7 +309,7 @@ int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, i
                            (decoder->wavData + ret1), decoder->frame_size, 0);
         if (ret2 <= 0)
         {
-            printf("fail to decode : %d\n", ret2);
+            printf("failed to decode : %d\n", ret2);
             exit (1);
         }
         

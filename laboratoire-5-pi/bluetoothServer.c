@@ -12,8 +12,7 @@
 #define CHANNEL 4
 #define QUEUE 10
 
-int initBlueServer(int *sock,struct sockaddr_rc *addr)
-{
+int initBlueServer(int *sock,struct sockaddr_rc *addr){
   unsigned int alen;
 
   if ((*sock = socket(AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM)) < 0)
@@ -35,8 +34,7 @@ int initBlueServer(int *sock,struct sockaddr_rc *addr)
   return 0;
 }
 
-int serveClient(int *client, ret_t *ret)
-{
+int serveClient(int *client, ret_t *ret){
   char msg[5];
   char buff[256];
   ssize_t i = read(*client, msg, 5);
@@ -76,8 +74,8 @@ int serveClient(int *client, ret_t *ret)
 
   return 0;
 }
-int listAudioFiles(const char *dir, int client)
-{
+
+int listAudioFiles(const char *dir, int client){
   struct dirent *de; // Pointer for directory entry
   size_t count = 0;
 
@@ -126,8 +124,7 @@ int listAudioFiles(const char *dir, int client)
   return 0;
 }
 
-int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr)
-{
+int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr){
   unsigned int alen;
   alen = sizeof(*addr);
 
@@ -141,8 +138,8 @@ int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr)
   }
   return 0;
 }
-int playAudioFile(int client, ret_t *ret)
-{
+
+int playAudioFile(int client, ret_t *ret){
 
   int k = 0;
   FILE *fp;
@@ -150,7 +147,7 @@ int playAudioFile(int client, ret_t *ret)
   
   fp = fopen(ret->audioFile, "r");
   if(fp == NULL){
-    printf("Error openning audio file");
+    printf("Error opening audio file");
     return 1;
   }
   fread(buffer, sizeof(char), sizeof(wavfile_header_t), fp);
@@ -214,7 +211,8 @@ int playAudioFile(int client, ret_t *ret)
   ret->success = 1;
   return 0;
 }
-int selectFilter(ret_t *ret)
-{
+
+int selectFilter(ret_t *ret){
+  ret->filter = 1;
   return 0;
 }

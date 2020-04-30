@@ -3,8 +3,7 @@
 
 #include "includes.h"
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv){
     int c;
     int long_index = 0;
     int debugFlag = 0;

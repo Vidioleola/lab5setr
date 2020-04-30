@@ -1,43 +1,43 @@
 [
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/COMPRESS.dir/compress.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/compress.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/compress.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/COMPRESS.dir/compress.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/compress.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/compress.c"
 },
 
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/COMPRESS.dir/opusUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/COMPRESS.dir/opusUtils.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/opusUtils.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/opusUtils.c"
 },
 
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/main.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/main.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/SETR_TP5_PC.dir/main.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/main.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/main.c"
 },
 
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/opusUtils.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/SETR_TP5_PC.dir/opusUtils.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/opusUtils.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/opusUtils.c"
 },
 
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/bluetoothClient.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/SETR_TP5_PC.dir/bluetoothClient.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/bluetoothClient.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/bluetoothClient.c"
 },
 
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/alsaUtils.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/SETR_TP5_PC.dir/alsaUtils.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/alsaUtils.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/alsaUtils.c"
 },
 
 {
-  "directory": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build",
-  "command": "/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/AUDIO.dir/audio.c.o   -c /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/audio.c",
-  "file": "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/audio.c"
+  "directory": "/home/epepi/setr/lab5setr/laboratoire-5-pc/build",
+  "command": "/usr/bin/x86_64-linux-gnu-gcc-7   -g   -o CMakeFiles/AUDIO.dir/audio.c.o   -c /home/epepi/setr/lab5setr/laboratoire-5-pc/audio.c",
+  "file": "/home/epepi/setr/lab5setr/laboratoire-5-pc/audio.c"
 }
 ]
