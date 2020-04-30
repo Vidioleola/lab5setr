@@ -65,11 +65,11 @@ typedef struct wavfile_header_s
 uchar *map_file_encode(const char *fn);
 uchar* map_file_decode(const char* fn, size_t* size);
 int decode(const char* audioFile);
-int encode(const char *audioIn, const char *audioOut);
+int encode(const char *audioIn, const char *audioOut, int filter_type);
 
 int initBlueServer(int *sock, struct sockaddr_rc *addr);
 int serveClient(int *client, ret_t *ret);
 int listAudioFiles(const char* dir, int client);
 int playAudioFile(int client, ret_t *ret);
-int selectFilter(ret_t *ret);
+int encodeAndFilter(ret_t *ret);
 int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr);

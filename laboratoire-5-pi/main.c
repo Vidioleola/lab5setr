@@ -50,7 +50,7 @@ int main(int argc, char **argv){
             playAudioFile(client, &ret); //ret.success is set here
             break;
         case 2:
-            selectFilter(&ret);
+            encodeAndFilter(&ret);
             break;
         default:
             perror("unknown ret from serveClient");

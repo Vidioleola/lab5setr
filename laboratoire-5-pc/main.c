@@ -53,6 +53,7 @@ int main(int argc, char **argv)
     char *addrName = NULL;
     char *addrDebug = "B8:27:EB:D7:BF:66";
     char audioFileName[256];
+    int filterType = 0;
     int err = 0;
     static struct option long_options[] =
         {
@@ -60,11 +61,12 @@ int main(int argc, char **argv)
             {"generateDecoded", no_argument, 0, 'g'},
             {"debug", no_argument, 0, 'z'},
             {"list", no_argument, 0, 'l'},
+            {"filter", required_argument, 0, 'f'},
             {"addr", required_argument, 0, 'a'},
             {"source", required_argument, 0, 's'},
             {0, 0, 0, 0}};
 
-    while ((c = getopt_long(argc, argv, "gzla:s:", long_options, &long_index)) != -1)
+    while ((c = getopt_long(argc, argv, "gzlfa:s:", long_options, &long_index)) != -1)
     {
         switch (c)
         {
@@ -90,6 +92,20 @@ int main(int argc, char **argv)
             else
             {
                 printf("missing addr name with -a\n");
+                return 1;
+            }
+            break;
+        case 'f'://1 = low-pass filter, 2 = high-pass filter
+            if(optarg){
+                filterType = atoi(optarg);
+                if(filterType<1 || filterType>2){
+                    filterType = 0;
+                    printf("invalid filter argument specified, use 1 for a lowpass, 2 for a highpass");
+                    return 1;
+                }
+            }
+            else{
+                printf("no filter argument specified");
                 return 1;
             }
             break;
@@ -162,6 +178,13 @@ int main(int argc, char **argv)
     data.sock = sock;
     data.keepGoing = 1;
     data.delta = 0;
+
+    //ask to filter an audioFile
+    if(filterType){
+        char fMsg[2][5] = {"FILP", "FIHP"};
+        write(sock, fMsg[filterType-1], 5);
+        write(sock, audioFileName, 256);
+    }
 
     //ask an audioFile
     write(sock, "PLAY", 5);

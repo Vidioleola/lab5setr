@@ -53,17 +53,36 @@ int serveClient(int *client, ret_t *ret){
   {
     ret->requestType = 1;
     i = read(*client, buff, 256);
-    if (i < 0)
-    {
+    if (i < 0){
       perror("Error reading client file request");
       close(*client);
-      return (1);
+      return 1;
     }
     strcat(ret->audioFile, buff); //append to ./music/
   }
-  else if (strcmp(msg, "FILT") == 0)
+  else if (strcmp(msg, "FILP") == 0)
   {
     ret->requestType = 2;
+    ret->filter = 1;
+    i = read(*client, buff, 256);
+    if (i < 0){
+      perror("Error reading client file request");
+      close(*client);
+      return 1;
+    }
+    strcat(ret->audioFile, buff); //append to ./music/
+  }
+  else if (strcmp(msg, "FIHP") == 0)
+  {
+    ret->requestType = 2;
+    ret->filter = 2;
+    i = read(*client, buff, 256);
+    if (i < 0){
+      perror("Error reading client file request");
+      close(*client);
+      return 1;
+    }
+    strcat(ret->audioFile, buff); //append to ./music/
   }
   else
   {
@@ -212,7 +231,10 @@ int playAudioFile(int client, ret_t *ret){
   return 0;
 }
 
-int selectFilter(ret_t *ret){
-  ret->filter = 1;
+int encodeAndFilter(ret_t *ret){
+  char *audioOut = ret->audioFile;
+  if(ret->filter==1) strcat(audioOut, "_filtered_lp");
+  else if(ret->filter==2) strcat(audioOut, "_filtered_hp");
+  encode(ret->audioFile, audioOut, ret->filter);
   return 0;
 }

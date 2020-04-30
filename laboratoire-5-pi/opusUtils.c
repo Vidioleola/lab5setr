@@ -1,14 +1,21 @@
 #include "includes.h"
 
 // Array contenant les coefficients d'un filtre passe-bas (le mettre au négatif = filtre passe-haut)
-double lowPass[63] = {
-    -0.0130, -0.0329, -0.0229,  0.0097,  0.0354,  0.0293, -0.0053, -0.0377, -0.0368, -0.0004,  0.0398,
+double filters[2][63] = {{
+   -0.0130, -0.0329, -0.0229,  0.0097,  0.0354,  0.0293, -0.0053, -0.0377, -0.0368, -0.0004,  0.0398,
     0.0456,  0.0079, -0.0417, -0.0566, -0.0180,  0.0434,  0.0708,  0.0323, -0.0447, -0.0909, -0.0544,
     0.0458,  0.1237,  0.0939, -0.0466, -0.1918, -0.1892,  0.0470,  0.4546,  0.8415,  1.0000,  0.8415,
     0.4546,  0.0470, -0.1892, -0.1918, -0.0466,  0.0939,  0.1237,  0.0458, -0.0544, -0.0909, -0.0447,
     0.0323,  0.0708,  0.0434, -0.0180, -0.0566, -0.0417,  0.0079,  0.0456,  0.0398, -0.0004, -0.0368,
    -0.0377, -0.0053,  0.0293,  0.0354,  0.0097, -0.0229, -0.0329, -0.0130,
-};
+},{
+    0.0130,  0.0329,  0.0229, -0.0097, -0.0354, -0.0293,  0.0053,  0.0377,  0.0368,  0.0004, -0.0398,
+   -0.0456, -0.0079,  0.0417,  0.0566,  0.0180, -0.0434, -0.0708, -0.0323,  0.0447,  0.0909,  0.0544,
+   -0.0458, -0.1237, -0.0939,  0.0466,  0.1918,  0.1892, -0.0470, -0.4546, -0.8415, -1.0000, -0.8415,
+   -0.4546, -0.0470,  0.1892,  0.1918,  0.0466, -0.0939, -0.1237, -0.0458,  0.0544,  0.0909,  0.0447,
+   -0.0323, -0.0708, -0.0434,  0.0180,  0.0566,  0.0417, -0.0079, -0.0456, -0.0398,  0.0004,  0.0368,
+    0.0377,  0.0053, -0.0293, -0.0354, -0.0097,  0.0229,  0.0329,  0.0130,
+}};
 
 // Array pour contenir les échantillons d'entrée
 double insamp[100];
@@ -45,7 +52,7 @@ void firFloat( double *coeffs, double *input, double *output,
     // décalage des échantillons d'entrées vers l'arrière pour être prêt pour la prochaine itération
     memmove( &insamp[0], &insamp[length],
             (filterLength - 1) * sizeof(double) );
- 
+
 }
 
 // Fonction pour transformer les entiers des fichiers wav en nombres à virgule flottante
@@ -182,7 +189,7 @@ int decode(const char *audioFile){
     return 0;
 }
 
-int encode(const char *audioIn, const char *audioOut){
+int encode(const char *audioIn, const char *audioOut, int filter_type){
     int ret;
 
     uchar *input_ptr = map_file_encode(audioIn); // Pointeur de début de fichier
@@ -275,23 +282,53 @@ int encode(const char *audioIn, const char *audioOut){
 
     int max_data_size = 100; // Nombre maximal de byte encodé par frame
     uchar *buffer = (uchar *)malloc(max_data_size);
+    double filter_input[max_data_size];
+    double filter_output[max_data_size];
+    int16_t filtered_data[max_data_size];
+    double *filter_coeffs;
+    if(filter_type>0){
+        filter_coeffs = filters[filter_type-1];
+    }
     int frame_duration_ms = 5; // Une durée plus grande que 10 ms va introduire énormément de bruit dans un signal musical.
     int frame_size = sample_rate / 1000 * frame_duration_ms;
     printf("frame size is : %d\n", frame_size);
-    clock_t start_time = clock();
-    while ((uchar *)reading_end < input_ptr + total_file_size)
-    {
-        ret = opus_encode(encoder, (opus_int16 *)reading_end, frame_size, buffer, max_data_size);
-        if (ret <= 0)
-        {
-            printf("fail to encode");
-            break;
-        }
-        // Écriture du signal encodé dans le fichier
-        fwrite(buffer, 1, ret, fp);
 
-        // Incrémente le pointeur
-        reading_end += frame_size;
+    clock_t start_time = clock();
+    if(filter_type>0){
+        firFloatInit();
+        while ((uchar *)reading_end < input_ptr + total_file_size){
+
+            intToFloat(reading_end, filter_input, frame_size);
+            firFloat(filter_coeffs, filter_input, filter_output, frame_size, 63);
+            floatToInt(filter_output, filtered_data, frame_size);
+            ret = opus_encode(encoder, (opus_int16 *)filtered_data, frame_size, buffer, max_data_size);
+            if (ret <= 0)
+            {
+                printf("failed to encode");
+                break;
+            }
+            // Écriture du signal encodé dans le fichier
+            fwrite(buffer, 1, ret, fp);
+
+            // Incrémente le pointeur
+            reading_end += frame_size;
+        }
+    }
+    else {
+        while ((uchar *)reading_end < input_ptr + total_file_size){
+
+            ret = opus_encode(encoder, (opus_int16 *)reading_end, frame_size, buffer, max_data_size);
+            if (ret <= 0)
+            {
+                printf("failed to encode");
+                break;
+            }
+            // Écriture du signal encodé dans le fichier
+            fwrite(buffer, 1, ret, fp);
+
+            // Incrémente le pointeur
+            reading_end += frame_size;
+        }
     }
     clock_t end_time = clock();
     double time_spent = (double)(end_time - start_time) / CLOCKS_PER_SEC;
