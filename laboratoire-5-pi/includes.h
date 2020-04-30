@@ -66,6 +66,10 @@ uchar *map_file_encode(const char *fn);
 uchar* map_file_decode(const char* fn, size_t* size);
 int decode(const char* audioFile);
 int encode(const char *audioIn, const char *audioOut, int filter_type);
+void firFloatInit(void);
+void firFloat( double *coeffs, double *input, double *output, int length, int filterLength);
+void intToFloat( int16_t *input, double *output, int length);
+void floatToInt( double *input, int16_t *output, int length);
 
 int initBlueServer(int *sock, struct sockaddr_rc *addr);
 int serveClient(int *client, ret_t *ret);

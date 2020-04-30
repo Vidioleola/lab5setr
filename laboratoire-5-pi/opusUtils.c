@@ -21,13 +21,12 @@ double filters[2][63] = {{
 double insamp[100];
  
 // Initialisation du filtre de réponse à impulsion finie
-void firFloatInit( void ){
+void firFloatInit(void){
     memset( insamp, 0, sizeof( insamp ) );
 }
  
 // the FIR filter function
-void firFloat( double *coeffs, double *input, double *output,
-       int length, int filterLength ){
+void firFloat( double *coeffs, double *input, double *output, int length, int filterLength){
     double acc;     // accumulateur
     double *coeffp; // pointeur vers les coefficients du filtre
     double *inputp; // pointeur vers les échantillons d'entrée
@@ -51,13 +50,12 @@ void firFloat( double *coeffs, double *input, double *output,
     }
     // décalage des échantillons d'entrées vers l'arrière pour être prêt pour la prochaine itération
     memmove( &insamp[0], &insamp[length],
-            (filterLength - 1) * sizeof(double) );
+            (filterLength - 1) * sizeof(double));
 
 }
 
 // Fonction pour transformer les entiers des fichiers wav en nombres à virgule flottante
-void intToFloat( int16_t *input, double *output, int length )
-{
+void intToFloat( int16_t *input, double *output, int length){
     int i;
  
     for ( i = 0; i < length; i++ ) {
@@ -66,8 +64,7 @@ void intToFloat( int16_t *input, double *output, int length )
 }
  
 // Fonction pour transformer des nombres à virgule flottante vers des entiers, afin que le fichier modifié puisse être compressé
-void floatToInt( double *input, int16_t *output, int length )
-{
+void floatToInt( double *input, int16_t *output, int length){
     int i;
  
     for ( i = 0; i < length; i++ ) {
