@@ -80,7 +80,7 @@ typedef struct Decoder
     int frame_duration_ms;
     int frame_size;
     opus_int16 *wavData;
-    opus_int16 *tmpData;
+    opus_int16 *save;
     size_t nReady;
 } decoder_t;
 

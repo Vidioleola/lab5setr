@@ -165,10 +165,8 @@ int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr)
   return 0;
 }
 
-int playAudioFile(int client, ret_t *client_ret, int flag)
+int playAudioFile(int client, ret_t *client_ret)
 {
-
-  /* this snipet is not working correctly : there is part of audio missing at decoding
   int ret;
 
   uchar *input_ptr = map_file_encode(client_ret->audioFile); // Pointeur de début de fichier
@@ -284,13 +282,11 @@ int playAudioFile(int client, ret_t *client_ret, int flag)
       ret = opus_encode(encoder, (opus_int16 *)reading_end, frame_size, (senderBuffer + i * stride), stride);
       if (ret <= 0)
       {
-        printf("fail to encode");
-        break;
+        perror("fail to encode");
+        exit(1);
       }
-      //printf("ret is : %d\n", ret);
-
       // Incrémente le pointeur
-      reading_end += frame_size;
+      reading_end += 2 * frame_size;
       if ((uchar *)reading_end >= input_ptr + total_file_size)
       {
         goto end;
@@ -307,7 +303,6 @@ int playAudioFile(int client, ret_t *client_ret, int flag)
         exit(1);
       }
       totalWritten += written;
-      //printf("sending %d data to client\n", written);
     }
     k++;
   }
@@ -317,21 +312,18 @@ end:
   write(client, "STOP", 5);
   close(client);
   free(senderBuffer);
-  client_ret->success = 1;
   return 0;
-  */
+}
+
+int playCompressedAudio(int client, ret_t *client_ret)
+{
 
   int k = 0;
   FILE *fp;
   char buffer[PACKETS_SIZE];
-  if (flag == 0)
-  {
-    fp = fopen(client_ret->audioFile, "r");
-  }
-  else
-  {
-    fp = fopen(client_ret->audioFileFilter, "r");
-  }
+
+  fp = fopen(client_ret->audioFileFilter, "r");
+
   if (fp == NULL)
   {
     printf("Error opening audio file %s \n", client_ret->audioFile);
@@ -406,8 +398,5 @@ int encodeAndFilter(ret_t *client_ret)
   else if (client_ret->filter == 2)
     strcat(client_ret->audioFileFilter, "_filtered_hp");
   encode(client_ret->audioFile, client_ret->audioFileFilter, client_ret->filter);
-  memset(client_ret->audioFile, '\0', 512);
-  memset(client_ret->audioFileFilter, '\0', 512);
-
   return 0;
 }

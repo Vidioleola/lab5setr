@@ -133,12 +133,12 @@ double filters[2][63] = {{
                          }};
 
 // Array pour contenir les échantillons d'entrée
-double insamp[100];
+double insamp[512];
 
 // Initialisation du filtre de réponse à impulsion finie
 void firFloatInit(void)
 {
-    memset(insamp, 0, sizeof(insamp));
+    memset(insamp, 0, 512 * sizeof(double));
 }
 
 // the FIR filter function
@@ -199,7 +199,7 @@ void floatToInt(double *input, int16_t *output, int length)
             input[i] = -32768.0;
         }
         // convert
-        output[i] = (int16_t)input[i];
+        output[i] = (int16_t)(input[i]);
     }
 }
 

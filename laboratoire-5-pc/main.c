@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     int long_index = 0;
     int debugFlag, generateDecoded, listFiles = 0;
     int addrFlag, audioFileNameFlag = 0;
-    char *addrName = NULL;
+    char addrName[64];
     char *addrDebug = "B8:27:EB:D7:BF:66";
     char audioFileName[256];
     int filterType = 0;
@@ -73,7 +73,6 @@ int main(int argc, char **argv)
         case 'a':
             if (optarg)
             {
-                addrName = (char *)malloc((strlen(optarg) + 1) * sizeof(char));
                 strcpy(addrName, optarg);
                 addrFlag = 1;
             }
@@ -91,7 +90,7 @@ int main(int argc, char **argv)
             }
             else
             {
-                printf("missing addr name with -a\n");
+                printf("missing source name with -s\n");
                 return 1;
             }
             break;
@@ -149,11 +148,6 @@ int main(int argc, char **argv)
     if (listFiles == 1)
     {
         listAudioFiles(sock);
-        if (addrFlag == 1)
-        {
-            free(addrName);
-        }
-
         return 0;
     }
 
@@ -161,6 +155,32 @@ int main(int argc, char **argv)
     {
         printf("You must select an audioFile. Use -l to list\n");
         return 1;
+    }
+
+    //ask to filter an audioFile
+    if (filterType)
+    {
+        char fMsg[2][5] = {"FILP", "FIHP"};
+        char buff[3];
+        write(sock, fMsg[filterType - 1], 5);
+        write(sock, audioFileName, 256);
+        read(sock, buff, 3);
+        if (strcmp(buff, "OK") == 0)
+        {
+            printf("Filtering completed\n");
+        }
+        else
+        {
+            printf("Error while filtering\n");
+            close(sock);
+            return 1;
+        }
+    }
+    else
+    {
+        //ask an audioFile without filter
+        write(sock, "PLAY", 5);
+        write(sock, audioFileName, 256);
     }
 
     pthread_cond_t condTooFew = PTHREAD_COND_INITIALIZER;
@@ -182,33 +202,6 @@ int main(int argc, char **argv)
     data.sock = sock;
     data.keepGoing = 1;
     data.delta = 0;
-
-    //ask to filter an audioFile
-    if (filterType)
-    {
-        char fMsg[2][5] = {"FILP", "FIHP"};
-        char buff[3];
-        write(sock, fMsg[filterType - 1], 5);
-        write(sock, audioFileName, 256);
-        read(sock, buff, 3);
-        if (strcmp(buff, "OK") == 0)
-        {
-            printf("Filtering completed\n");
-            close(sock);
-            return 0;
-        }
-        else
-        {
-            printf("Error while filtering\n");
-            return 1;
-        }
-    }
-    else
-    {
-        //ask an audioFile without filter
-        write(sock, "PLAY", 5);
-        write(sock, audioFileName, 256);
-    }
 
     prepareDecoding(&data, &decoder, &audio);
     initAlsa(&audio, &decoder);
@@ -245,11 +238,7 @@ int main(int argc, char **argv)
     pthread_join(threadBuffer, NULL);
     printf("completed \n");
     closePcm(&audio);
-    if (addrFlag == 1)
-    {
-        free(addrName);
-    }
-    free(decoder.wavData);
+    free(decoder.save);
     pthread_mutex_destroy(data.lock);
     pthread_cond_destroy(data.condTooFew);
     return 0;

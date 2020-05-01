@@ -74,6 +74,7 @@ void floatToInt( double *input, int16_t *output, int length);
 int initBlueServer(int *sock, struct sockaddr_rc *addr);
 int serveClient(int *client, ret_t *ret);
 int listAudioFiles(const char* dir, int client);
-int playAudioFile(int client, ret_t *client_ret, int flag);
+int playAudioFile(int client, ret_t *client_ret);
+int playCompressedAudio(int client, ret_t *client_ret);
 int encodeAndFilter(ret_t *client_ret);
 int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr);

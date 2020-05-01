@@ -42,12 +42,14 @@ int main(int argc, char **argv){
             listAudioFiles(audioFilesDir, client);
             break;
         case 1:
-            playAudioFile(client, &ret, 0);
+            playAudioFile(client, &ret);
             goto end;
             break;
         case 2:
             encodeAndFilter(&ret);
             write(client, "OK", 3);
+            playCompressedAudio(client, &ret);
+            goto end;
             break;
         default:
             perror("unknown ret from serveClient");
@@ -57,7 +59,6 @@ int main(int argc, char **argv){
     }
     end:
     close(sock);
-    //free(filterName);
     printf("completed \n");
     return 0;
 }

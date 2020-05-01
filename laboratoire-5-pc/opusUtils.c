@@ -35,7 +35,7 @@ uchar *map_file_decode(const char *fn, size_t *size)
     return ptr;
 }
 
-int decode(const char *audioFile, const char*audioOut)
+int decode(const char *audioFile, const char *audioOut)
 {
     int ret;
     size_t file_size = 0;
@@ -277,58 +277,43 @@ int prepareDecoding(sync_t *buffer, decoder_t *decoder, audio_t *audioFile)
     decoder->frame_duration_ms = 5;
     decoder->frame_size = sample_rate / 1000 * decoder->frame_duration_ms;
     printf("frame size is %d\n", decoder->frame_size);
-    decoder->wavData = (opus_int16 *)malloc(100 * decoder->frame_size * n_channels * sizeof(opus_int16));
-
-    /*
-    audioFile->fp = fopen(audioFile->fileName, "w+");
-    if (!audioFile->fp)
-    {
-        printf("fail to open file %s\n", audioFile->fileName);
-        return -1;
-    }
-    fwrite(decoder->header, sizeof(char), wav_header_size, audioFile->fp);
-    */
+    decoder->wavData = (opus_int16 *)malloc(4 * decoder->frame_size * n_channels * sizeof(opus_int16));
+    decoder->save = decoder->wavData;
     return 0;
 }
 
 int decodeAndPlaySignal(uchar *signal, decoder_t *decoder, audio_t *audioFile, int generateDecoded)
 {
     snd_pcm_sframes_t frames;
-    for (int j = 0; j < PACKETS_SIZE; j += 2*decoder->chunk_size)
+    for (int j = 0; j < PACKETS_SIZE; j += 2 * decoder->chunk_size)
     {
         int ret1 = opus_decode(decoder->decoder, signal + j, decoder->chunk_size,
-                              (decoder->wavData), decoder->frame_size, 0);
+                               (decoder->wavData), decoder->frame_size, 0);
         if (ret1 <= 0)
         {
             printf("fail to decode : %d\n", ret1);
-            printf("chunck is : %d\n", decoder->chunk_size);
-            exit (1);
+            exit(1);
         }
-        
+
         int ret2 = opus_decode(decoder->decoder, signal + j + decoder->chunk_size, decoder->chunk_size,
-                           (decoder->wavData + ret1), decoder->frame_size, 0);
+                               (decoder->wavData + decoder->frame_size), decoder->frame_size, 0);
         if (ret2 <= 0)
         {
             printf("fail to decode : %d\n", ret2);
-            exit (1);
-        }
-        
-        decoder->nReady += ret1 + ret2;
-
-        if (decoder->nReady >= 2 * decoder->frame_size)
-        {
-            frames = snd_pcm_writei(audioFile->handle, decoder->wavData, decoder->frame_size);
-            if (frames < 0)
-                frames = snd_pcm_recover(audioFile->handle, frames, 0);
-            if (frames < 0)
-            {
-                printf("snd_pcm_writei failed: %s\n", snd_strerror(frames));
-                exit(1);
-            }
-            if (frames > 0 && frames < (long)decoder->frame_size)
-                printf("Short write (expected %li, wrote %li)\n", (long)decoder->frame_size, frames);
-            decoder->nReady -= 2 * decoder->frame_size;
+            exit(1);
         }
     }
+    //play audio
+    frames = snd_pcm_writei(audioFile->handle, decoder->wavData, decoder->frame_size);
+    if (frames < 0)
+        frames = snd_pcm_recover(audioFile->handle, frames, 0);
+    if (frames < 0)
+    {
+        printf("snd_pcm_writei failed: %s\n", snd_strerror(frames));
+        exit(1);
+    }
+    if (frames > 0 && frames < (long)decoder->frame_size)
+        printf("Short write (expected %li, wrote %li)\n", (long)decoder->frame_size, frames);
+
     return 0;
 }
