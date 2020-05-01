@@ -2,75 +2,200 @@
 
 // Array contenant les coefficients d'un filtre passe-bas (le mettre au négatif = filtre passe-haut)
 double filters[2][63] = {{
-   -0.0130, -0.0329, -0.0229,  0.0097,  0.0354,  0.0293, -0.0053, -0.0377, -0.0368, -0.0004,  0.0398,
-    0.0456,  0.0079, -0.0417, -0.0566, -0.0180,  0.0434,  0.0708,  0.0323, -0.0447, -0.0909, -0.0544,
-    0.0458,  0.1237,  0.0939, -0.0466, -0.1918, -0.1892,  0.0470,  0.4546,  0.8415,  1.0000,  0.8415,
-    0.4546,  0.0470, -0.1892, -0.1918, -0.0466,  0.0939,  0.1237,  0.0458, -0.0544, -0.0909, -0.0447,
-    0.0323,  0.0708,  0.0434, -0.0180, -0.0566, -0.0417,  0.0079,  0.0456,  0.0398, -0.0004, -0.0368,
-   -0.0377, -0.0053,  0.0293,  0.0354,  0.0097, -0.0229, -0.0329, -0.0130,
-},{
-    0.0130,  0.0329,  0.0229, -0.0097, -0.0354, -0.0293,  0.0053,  0.0377,  0.0368,  0.0004, -0.0398,
-   -0.0456, -0.0079,  0.0417,  0.0566,  0.0180, -0.0434, -0.0708, -0.0323,  0.0447,  0.0909,  0.0544,
-   -0.0458, -0.1237, -0.0939,  0.0466,  0.1918,  0.1892, -0.0470, -0.4546, -0.8415, -1.0000, -0.8415,
-   -0.4546, -0.0470,  0.1892,  0.1918,  0.0466, -0.0939, -0.1237, -0.0458,  0.0544,  0.0909,  0.0447,
-   -0.0323, -0.0708, -0.0434,  0.0180,  0.0566,  0.0417, -0.0079, -0.0456, -0.0398,  0.0004,  0.0368,
-    0.0377,  0.0053, -0.0293, -0.0354, -0.0097,  0.0229,  0.0329,  0.0130,
-}};
+                             -0.0130,
+                             -0.0329,
+                             -0.0229,
+                             0.0097,
+                             0.0354,
+                             0.0293,
+                             -0.0053,
+                             -0.0377,
+                             -0.0368,
+                             -0.0004,
+                             0.0398,
+                             0.0456,
+                             0.0079,
+                             -0.0417,
+                             -0.0566,
+                             -0.0180,
+                             0.0434,
+                             0.0708,
+                             0.0323,
+                             -0.0447,
+                             -0.0909,
+                             -0.0544,
+                             0.0458,
+                             0.1237,
+                             0.0939,
+                             -0.0466,
+                             -0.1918,
+                             -0.1892,
+                             0.0470,
+                             0.4546,
+                             0.8415,
+                             1.0000,
+                             0.8415,
+                             0.4546,
+                             0.0470,
+                             -0.1892,
+                             -0.1918,
+                             -0.0466,
+                             0.0939,
+                             0.1237,
+                             0.0458,
+                             -0.0544,
+                             -0.0909,
+                             -0.0447,
+                             0.0323,
+                             0.0708,
+                             0.0434,
+                             -0.0180,
+                             -0.0566,
+                             -0.0417,
+                             0.0079,
+                             0.0456,
+                             0.0398,
+                             -0.0004,
+                             -0.0368,
+                             -0.0377,
+                             -0.0053,
+                             0.0293,
+                             0.0354,
+                             0.0097,
+                             -0.0229,
+                             -0.0329,
+                             -0.0130,
+                         },
+                         {
+                             0.0130,
+                             0.0329,
+                             0.0229,
+                             -0.0097,
+                             -0.0354,
+                             -0.0293,
+                             0.0053,
+                             0.0377,
+                             0.0368,
+                             0.0004,
+                             -0.0398,
+                             -0.0456,
+                             -0.0079,
+                             0.0417,
+                             0.0566,
+                             0.0180,
+                             -0.0434,
+                             -0.0708,
+                             -0.0323,
+                             0.0447,
+                             0.0909,
+                             0.0544,
+                             -0.0458,
+                             -0.1237,
+                             -0.0939,
+                             0.0466,
+                             0.1918,
+                             0.1892,
+                             -0.0470,
+                             -0.4546,
+                             -0.8415,
+                             -1.0000,
+                             -0.8415,
+                             -0.4546,
+                             -0.0470,
+                             0.1892,
+                             0.1918,
+                             0.0466,
+                             -0.0939,
+                             -0.1237,
+                             -0.0458,
+                             0.0544,
+                             0.0909,
+                             0.0447,
+                             -0.0323,
+                             -0.0708,
+                             -0.0434,
+                             0.0180,
+                             0.0566,
+                             0.0417,
+                             -0.0079,
+                             -0.0456,
+                             -0.0398,
+                             0.0004,
+                             0.0368,
+                             0.0377,
+                             0.0053,
+                             -0.0293,
+                             -0.0354,
+                             -0.0097,
+                             0.0229,
+                             0.0329,
+                             0.0130,
+                         }};
 
 // Array pour contenir les échantillons d'entrée
 double insamp[100];
- 
+
 // Initialisation du filtre de réponse à impulsion finie
-void firFloatInit(void){
-    memset( insamp, 0, sizeof( insamp ) );
+void firFloatInit(void)
+{
+    memset(insamp, 0, sizeof(insamp));
 }
- 
+
 // the FIR filter function
-void firFloat( double *coeffs, double *input, double *output, int length, int filterLength){
+void firFloat(double *coeffs, double *input, double *output, int length, int filterLength)
+{
     double acc;     // accumulateur
     double *coeffp; // pointeur vers les coefficients du filtre
     double *inputp; // pointeur vers les échantillons d'entrée
     int n;
     int k;
- 
+
     // placer les nouveaux échantillons à la fin du buffer.
-    memcpy( &insamp[filterLength - 1], input,
-            length * sizeof(double) );
- 
+    memcpy(&insamp[filterLength - 1], input,
+           length * sizeof(double));
+
     // Appliquer le filtre pour chaque échantillon d'entrée
-    for ( n = 0; n < length; n++ ) {
+    for (n = 0; n < length; n++)
+    {
         // calculer la sortie n
         coeffp = coeffs;
         inputp = &insamp[filterLength - 1 + n];
         acc = 0;
-        for ( k = 0; k < filterLength; k++ ) {
+        for (k = 0; k < filterLength; k++)
+        {
             acc += (*coeffp++) * (*inputp--);
         }
         output[n] = acc;
     }
     // décalage des échantillons d'entrées vers l'arrière pour être prêt pour la prochaine itération
-    memmove( &insamp[0], &insamp[length],
+    memmove(&insamp[0], &insamp[length],
             (filterLength - 1) * sizeof(double));
-
 }
 
 // Fonction pour transformer les entiers des fichiers wav en nombres à virgule flottante
-void intToFloat( int16_t *input, double *output, int length){
+void intToFloat(int16_t *input, double *output, int length)
+{
     int i;
- 
-    for ( i = 0; i < length; i++ ) {
+
+    for (i = 0; i < length; i++)
+    {
         output[i] = (double)input[i];
     }
 }
- 
+
 // Fonction pour transformer des nombres à virgule flottante vers des entiers, afin que le fichier modifié puisse être compressé
-void floatToInt( double *input, int16_t *output, int length){
+void floatToInt(double *input, int16_t *output, int length)
+{
     int i;
- 
-    for ( i = 0; i < length; i++ ) {
-        if ( input[i] > 32767.0 ) {
+
+    for (i = 0; i < length; i++)
+    {
+        if (input[i] > 32767.0)
+        {
             input[i] = 32767.0;
-        } else if ( input[i] < -32768.0 ) {
+        }
+        else if (input[i] < -32768.0)
+        {
             input[i] = -32768.0;
         }
         // convert
@@ -79,11 +204,12 @@ void floatToInt( double *input, int16_t *output, int length){
 }
 
 // Fonction pour placer le fichier en mémoire
-uchar *map_file_encode(const char *fn){
+uchar *map_file_encode(const char *fn)
+{
     FILE *fp = fopen(fn, "r");
     if (!fp)
     {
-        printf("fail to open file: %s", fn);
+        printf("fail to open file: %s\n", fn);
         return (uchar *)MAP_FAILED;
     }
 
@@ -95,7 +221,8 @@ uchar *map_file_encode(const char *fn){
     return ptr;
 }
 
-uchar *map_file_decode(const char *fn, size_t *size){
+uchar *map_file_decode(const char *fn, size_t *size)
+{
     FILE *fp = fopen(fn, "r");
     if (!fp)
     {
@@ -111,7 +238,8 @@ uchar *map_file_decode(const char *fn, size_t *size){
     return ptr;
 }
 
-int decode(const char *audioFile){
+int decode(const char *audioFile)
+{
     int ret;
     size_t file_size = 0;
 
@@ -186,13 +314,14 @@ int decode(const char *audioFile){
     return 0;
 }
 
-int encode(const char *audioIn, const char *audioOut, int filter_type){
+int encode(const char *audioIn, const char *audioOut, int filter_type)
+{
     int ret;
 
     uchar *input_ptr = map_file_encode(audioIn); // Pointeur de début de fichier
     if (input_ptr == MAP_FAILED)
     {
-        printf("fail to map file");
+        printf("fail to map file\n");
         return -1;
     }
     int16_t *reading_end = (int16_t *)input_ptr; // Pointeur actif
@@ -202,7 +331,7 @@ int encode(const char *audioIn, const char *audioOut, int filter_type){
     char wav_marker[5] = "RIFF";
     if (strncmp(header->ChunkID, wav_marker, 4) != 0)
     {
-        printf("The input file is not a wav file..");
+        printf("The input file is not a wav file..\n");
         return -1;
     }
 
@@ -279,54 +408,39 @@ int encode(const char *audioIn, const char *audioOut, int filter_type){
 
     int max_data_size = 100; // Nombre maximal de byte encodé par frame
     uchar *buffer = (uchar *)malloc(max_data_size);
-    double filter_input[max_data_size];
-    double filter_output[max_data_size];
-    int16_t filtered_data[max_data_size];
-    double *filter_coeffs;
-    if(filter_type>0){
-        filter_coeffs = filters[filter_type-1];
-    }
     int frame_duration_ms = 5; // Une durée plus grande que 10 ms va introduire énormément de bruit dans un signal musical.
     int frame_size = sample_rate / 1000 * frame_duration_ms;
+    double filter_input[frame_size];
+    double filter_output[frame_size];
+    int16_t filtered_data[frame_size];
+    double *filter_coeffs;
+
+    filter_coeffs = filters[filter_type - 1];
+
     printf("frame size is : %d\n", frame_size);
 
     clock_t start_time = clock();
-    if(filter_type>0){
-        firFloatInit();
-        while ((uchar *)reading_end < input_ptr + total_file_size){
 
-            intToFloat(reading_end, filter_input, frame_size);
-            firFloat(filter_coeffs, filter_input, filter_output, frame_size, 63);
-            floatToInt(filter_output, filtered_data, frame_size);
-            ret = opus_encode(encoder, (opus_int16 *)filtered_data, frame_size, buffer, max_data_size);
-            if (ret <= 0)
-            {
-                printf("failed to encode");
-                break;
-            }
-            // Écriture du signal encodé dans le fichier
-            fwrite(buffer, 1, ret, fp);
+    firFloatInit();
+    while ((uchar *)reading_end < input_ptr + total_file_size)
+    {
 
-            // Incrémente le pointeur
-            reading_end += frame_size;
+        intToFloat(reading_end, filter_input, frame_size);
+        firFloat(filter_coeffs, filter_input, filter_output, frame_size, 63);
+        floatToInt(filter_output, filtered_data, frame_size);
+        ret = opus_encode(encoder, (opus_int16 *)filtered_data, frame_size, buffer, max_data_size);
+        if (ret <= 0)
+        {
+            printf("failed to encode");
+            break;
         }
-    }
-    else {
-        while ((uchar *)reading_end < input_ptr + total_file_size){
+        // Écriture du signal encodé dans le fichier
+        fwrite(buffer, 1, ret, fp);
 
-            ret = opus_encode(encoder, (opus_int16 *)reading_end, frame_size, buffer, max_data_size);
-            if (ret <= 0)
-            {
-                printf("failed to encode");
-                break;
-            }
-            // Écriture du signal encodé dans le fichier
-            fwrite(buffer, 1, ret, fp);
-
-            // Incrémente le pointeur
-            reading_end += frame_size;
-        }
+        // Incrémente le pointeur
+        reading_end += frame_size;
     }
+
     clock_t end_time = clock();
     double time_spent = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("encoding opus done in %f sec\n", time_spent);
@@ -334,6 +448,5 @@ int encode(const char *audioIn, const char *audioOut, int filter_type){
     fclose(fp);
     munmap(input_ptr, total_file_size);
     free(encoder);
-
     return 0;
 }

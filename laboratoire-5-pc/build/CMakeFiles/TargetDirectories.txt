@@ -1,5 +1,5 @@
-/home/epepi/setr/lab5setr/laboratoire-5-pc/build/CMakeFiles/rebuild_cache.dir
-/home/epepi/setr/lab5setr/laboratoire-5-pc/build/CMakeFiles/edit_cache.dir
-/home/epepi/setr/lab5setr/laboratoire-5-pc/build/CMakeFiles/COMPRESS.dir
-/home/epepi/setr/lab5setr/laboratoire-5-pc/build/CMakeFiles/SETR_TP5_PC.dir
-/home/epepi/setr/lab5setr/laboratoire-5-pc/build/CMakeFiles/AUDIO.dir
+/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/edit_cache.dir
+/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/COMPRESS.dir
+/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/rebuild_cache.dir
+/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/SETR_TP5_PC.dir
+/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build/CMakeFiles/AUDIO.dir

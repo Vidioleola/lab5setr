@@ -33,8 +33,8 @@
 typedef struct Ret{
     int requestType;
     int filter;
-    int success;
     char audioFile[512];
+    char audioFileFilter[512];
 }ret_t;
 
 typedef unsigned char uchar;
@@ -74,6 +74,6 @@ void floatToInt( double *input, int16_t *output, int length);
 int initBlueServer(int *sock, struct sockaddr_rc *addr);
 int serveClient(int *client, ret_t *ret);
 int listAudioFiles(const char* dir, int client);
-int playAudioFile(int client, ret_t *ret);
-int encodeAndFilter(ret_t *ret);
+int playAudioFile(int client, ret_t *client_ret, int flag);
+int encodeAndFilter(ret_t *client_ret);
 int waitForConnection(int *sock, int *client, struct sockaddr_rc *addr);

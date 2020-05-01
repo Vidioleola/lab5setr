@@ -66,7 +66,7 @@ int main(int argc, char **argv)
             {"source", required_argument, 0, 's'},
             {0, 0, 0, 0}};
 
-    while ((c = getopt_long(argc, argv, "gzlfa:s:", long_options, &long_index)) != -1)
+    while ((c = getopt_long(argc, argv, "gzla:s:f:", long_options, &long_index)) != -1)
     {
         switch (c)
         {
@@ -95,16 +95,19 @@ int main(int argc, char **argv)
                 return 1;
             }
             break;
-        case 'f'://1 = low-pass filter, 2 = high-pass filter
-            if(optarg){
+        case 'f': //1 = low-pass filter, 2 = high-pass filter
+            if (optarg)
+            {
                 filterType = atoi(optarg);
-                if(filterType<1 || filterType>2){
+                if (filterType < 1 || filterType > 2)
+                {
                     filterType = 0;
                     printf("invalid filter argument specified, use 1 for a lowpass, 2 for a highpass");
                     return 1;
                 }
             }
-            else{
+            else
+            {
                 printf("no filter argument specified");
                 return 1;
             }
@@ -154,7 +157,8 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    if(audioFileNameFlag != 1){
+    if (audioFileNameFlag != 1)
+    {
         printf("You must select an audioFile. Use -l to list\n");
         return 1;
     }
@@ -180,15 +184,31 @@ int main(int argc, char **argv)
     data.delta = 0;
 
     //ask to filter an audioFile
-    if(filterType){
+    if (filterType)
+    {
         char fMsg[2][5] = {"FILP", "FIHP"};
-        write(sock, fMsg[filterType-1], 5);
+        char buff[3];
+        write(sock, fMsg[filterType - 1], 5);
+        write(sock, audioFileName, 256);
+        read(sock, buff, 3);
+        if (strcmp(buff, "OK") == 0)
+        {
+            printf("Filtering completed\n");
+            close(sock);
+            return 0;
+        }
+        else
+        {
+            printf("Error while filtering\n");
+            return 1;
+        }
+    }
+    else
+    {
+        //ask an audioFile without filter
+        write(sock, "PLAY", 5);
         write(sock, audioFileName, 256);
     }
-
-    //ask an audioFile
-    write(sock, "PLAY", 5);
-    write(sock, audioFileName, 256);
 
     prepareDecoding(&data, &decoder, &audio);
     initAlsa(&audio, &decoder);

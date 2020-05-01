@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/epepi/setr/lab5setr/laboratoire-5-pc/build"
+			"value" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/epepi/setr/lab5setr/laboratoire-5-pc"
+			"value" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1115,7 +1115,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/epepi/setr/lab5setr/laboratoire-5-pc/build"
+			"value" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc/build"
 		},
 		{
 			"name" : "SETR_TP5_PC_SOURCE_DIR",
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/epepi/setr/lab5setr/laboratoire-5-pc"
+			"value" : "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pc"
 		}
 	],
 	"kind" : "cache",

@@ -1,8 +1,8 @@
 The target system is: Linux - 4.19 - arm
-The host system is: Linux - 4.4.0-17763-Microsoft - x86_64
+The host system is: Linux - 4.19.116-1-MANJARO - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc 
-Build flags: -Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib;-Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib
+Compiler: /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc 
+Build flags: -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib;-Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib
 Id flags:  
 
 The output was:
@@ -11,11 +11,11 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/3.17.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++ 
-Build flags: -Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib;-Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib
+Compiler: /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++ 
+Build flags: -Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib;-Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;-Wl,-rpath-link,/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib
 Id flags:  
 
 The output was:
@@ -24,65 +24,145 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/3.17.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
+Change Dir: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_3db36"
-[1/2] Building C object CMakeFiles/cmTC_3db36.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_3db36
+Run Build Command(s):/usr/bin/ninja cmTC_7395f && [1/2] Building C object CMakeFiles/cmTC_7395f.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_7395f
+
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
+Change Dir: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_1f38c"
-[1/2] Building C object CMakeFiles/cmTC_1f38c.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_1f38c
+Run Build Command(s):/usr/bin/ninja cmTC_df387 && [1/2] Building C object CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o
 Using built-in specs.
-COLLECT_GCC=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc
-COLLECT_LTO_WRAPPER=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper
+COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc
 Target: arm-raspbian-linux-gnueabihf
-Configured with: /home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs
+Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs
 Thread model: posix
 gcc version 8.3.0 (crosstool-NG UNKNOWN) 
-COMPILER_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/
-LIBRARY_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1f38c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRymB2w.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_1f38c /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_1f38c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1f38c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -isysroot /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot /usr/share/cmake-3.17/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccGfCawz.s
+GNU C17 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)
+	compiled by GNU C version 9.2.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include"
+ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include
+End of search list.
+GNU C17 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)
+	compiled by GNU C version 9.2.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 3d75dffd3308e0de8b7d98f00834e3b0
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o /tmp/ccGfCawz.s
+GNU assembler version 2.28.1 (arm-raspbian-linux-gnueabihf) using BFD version (crosstool-NG UNKNOWN) 2.28.1
+COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+[2/2] Linking C executable cmTC_df387
+Using built-in specs.
+COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc
+COLLECT_LTO_WRAPPER=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper
+Target: arm-raspbian-linux-gnueabihf
+Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs
+Thread model: posix
+gcc version 8.3.0 (crosstool-NG UNKNOWN) 
+COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_df387'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1efo9X.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_df387 /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_df387'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
+  implicit include dirs: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-raspbian-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_1f38c"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_1f38c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_1f38c]
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_df387 && [1/2] Building C object CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc]
-  ignore line: [COLLECT_LTO_WRAPPER=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper]
+  ignore line: [COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc]
   ignore line: [Target: arm-raspbian-linux-gnueabihf]
-  ignore line: [Configured with: /home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs]
+  ignore line: [Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl -Bstatic -lstdc++ -Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 8.3.0 (crosstool-NG UNKNOWN) ]
-  ignore line: [COMPILER_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/]
-  ignore line: [LIBRARY_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1f38c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRymB2w.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_1f38c /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_1f38c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o]
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2] ==> ignore
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -isysroot /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot /usr/share/cmake-3.17/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccGfCawz.s]
+  ignore line: [GNU C17 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.2.0  GMP version 6.1.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include"]
+  ignore line: [ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.2.0  GMP version 6.1.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 3d75dffd3308e0de8b7d98f00834e3b0]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o /tmp/ccGfCawz.s]
+  ignore line: [GNU assembler version 2.28.1 (arm-raspbian-linux-gnueabihf) using BFD version (crosstool-NG UNKNOWN) 2.28.1]
+  ignore line: [COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o' '-c'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [[2/2] Linking C executable cmTC_df387]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper]
+  ignore line: [Target: arm-raspbian-linux-gnueabihf]
+  ignore line: [Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl -Bstatic -lstdc++ -Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (crosstool-NG UNKNOWN) ]
+  ignore line: [COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_df387'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  link line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1efo9X.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_df387 /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o]
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccRymB2w.res] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc1efo9X.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [--sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot] ==> ignore
+    arg [--sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
@@ -91,24 +171,24 @@ Parsed C implicit link information from above output:
     arg [-m] ==> ignore
     arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1f38c] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o] ==> ignore
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
+    arg [cmTC_df387] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o] ==> ignore
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib] ==> ignore
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> ignore
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> ignore
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib] ==> ignore
-    arg [CMakeFiles/cmTC_1f38c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib] ==> ignore
+    arg [CMakeFiles/cmTC_df387.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -118,117 +198,167 @@ Parsed C implicit link information from above output:
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [--no-as-needed] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o] ==> ignore
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o] ==> ignore
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit dirs: [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
+  implicit dirs: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
   implicit fwks: []
 
 
-
-
-Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_10bdf"
-[1/2] Building C object CMakeFiles/cmTC_10bdf.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_10bdf
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:1c_static_assert
-    Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_eff96"
-[1/2] Building C object CMakeFiles/cmTC_eff96.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_eff96
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_d547d"
-[1/2] Building C object CMakeFiles/cmTC_d547d.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_d547d
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:0c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
+Change Dir: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_79662"
-[1/2] Building CXX object CMakeFiles/cmTC_79662.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_79662
+Run Build Command(s):/usr/bin/ninja cmTC_577e2 && [1/2] Building CXX object CMakeFiles/cmTC_577e2.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_577e2
+
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
+Change Dir: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_59d53"
-[1/2] Building CXX object CMakeFiles/cmTC_59d53.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_59d53
+Run Build Command(s):/usr/bin/ninja cmTC_123a7 && [1/2] Building CXX object CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o
 Using built-in specs.
-COLLECT_GCC=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++
-COLLECT_LTO_WRAPPER=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper
+COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++
 Target: arm-raspbian-linux-gnueabihf
-Configured with: /home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs
+Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs
 Thread model: posix
 gcc version 8.3.0 (crosstool-NG UNKNOWN) 
-COMPILER_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/
-LIBRARY_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_59d53' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBO4Ave.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_59d53 /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_59d53.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_59d53' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -isysroot /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot -D_GNU_SOURCE /usr/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc39gbbu.s
+GNU C++14 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)
+	compiled by GNU C version 9.2.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include"
+ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/arm-raspbian-linux-gnueabihf/.
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/backward
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include
+End of search list.
+GNU C++14 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)
+	compiled by GNU C version 9.2.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 24e5d62aac4aff2c2560ec71c91aec6c
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc39gbbu.s
+GNU assembler version 2.28.1 (arm-raspbian-linux-gnueabihf) using BFD version (crosstool-NG UNKNOWN) 2.28.1
+COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+[2/2] Linking CXX executable cmTC_123a7
+Using built-in specs.
+COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++
+COLLECT_LTO_WRAPPER=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper
+Target: arm-raspbian-linux-gnueabihf
+Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs
+Thread model: posix
+gcc version 8.3.0 (crosstool-NG UNKNOWN) 
+COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/
+LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_123a7' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjT0jMK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_123a7 /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_123a7' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/arm-raspbian-linux-gnueabihf/.]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/backward]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf]
+    add: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/arm-raspbian-linux-gnueabihf/.] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/arm-raspbian-linux-gnueabihf]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/backward] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/backward]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf]
+  collapse include dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
+  implicit include dirs: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/arm-raspbian-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/backward;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(arm-raspbian-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/vincent/VsCodeProjects/laboratoire5/laboratoire-5-pi/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/ninja" "cmTC_59d53"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_59d53.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_59d53]
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_123a7 && [1/2] Building CXX object CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++]
-  ignore line: [COLLECT_LTO_WRAPPER=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper]
+  ignore line: [COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++]
   ignore line: [Target: arm-raspbian-linux-gnueabihf]
-  ignore line: [Configured with: /home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c,c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/epepi/ct-config-rpi-zero/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs]
+  ignore line: [Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl -Bstatic -lstdc++ -Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 8.3.0 (crosstool-NG UNKNOWN) ]
-  ignore line: [COMPILER_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/]
-  ignore line: [LIBRARY_PATH=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_59d53' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBO4Ave.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_59d53 /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_59d53.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o]
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2] ==> ignore
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -isysroot /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot -D_GNU_SOURCE /usr/share/cmake-3.17/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mfloat-abi=hard -mfpu=vfp -mtls-dialect=gnu -marm -march=armv6+fp -auxbase-strip CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc39gbbu.s]
+  ignore line: [GNU C++14 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.2.0  GMP version 6.1.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/include"]
+  ignore line: [ignoring nonexistent directory "/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/arm-raspbian-linux-gnueabihf/.]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include/c++/backward]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/include-fixed]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include/arm-linux-gnueabihf]
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (crosstool-NG UNKNOWN) version 8.3.0 (arm-raspbian-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 9.2.0  GMP version 6.1.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 24e5d62aac4aff2c2560ec71c91aec6c]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/as -v -march=armv6 -mfloat-abi=hard -mfpu=vfp -meabi=5 -o CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc39gbbu.s]
+  ignore line: [GNU assembler version 2.28.1 (arm-raspbian-linux-gnueabihf) using BFD version (crosstool-NG UNKNOWN) 2.28.1]
+  ignore line: [COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  ignore line: [[2/2] Linking CXX executable cmTC_123a7]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/bin/arm-raspbian-linux-gnueabihf-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper]
+  ignore line: [Target: arm-raspbian-linux-gnueabihf]
+  ignore line: [Configured with: /home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=arm-raspbian-linux-gnueabihf --prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf --with-sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-languages=c c++ --with-pkgversion='crosstool-NG UNKNOWN' --enable-__cxa_atexit --enable-libmudflap --enable-libgomp --enable-libssp --enable-libquadmath --enable-libquadmath-support --enable-libsanitizer --disable-libmpx --with-gmp=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpfr=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-mpc=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --with-isl=/home/vincent/ct-config/.build/arm-raspbian-linux-gnueabihf/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl -Bstatic -lstdc++ -Bdynamic -lm' --enable-threads=posix --disable-plugin --disable-nls --enable-multiarch --with-local-prefix=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --enable-long-long --with-arch=armv6 --with-float=hard --with-fpu=vfp --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-version-specific-runtime-libs]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 8.3.0 (crosstool-NG UNKNOWN) ]
+  ignore line: [COMPILER_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/../../../../arm-raspbian-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/:/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_123a7' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  link line: [ /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2 -plugin /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so -plugin-opt=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjT0jMK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_123a7 /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0 -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf -rpath-link /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o /home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o]
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccBO4Ave.res] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/libexec/gcc/arm-raspbian-linux-gnueabihf/8.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccjT0jMK.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--sysroot=/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot] ==> ignore
+    arg [--sysroot=/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
@@ -237,24 +367,24 @@ Parsed CXX implicit link information from above output:
     arg [-m] ==> ignore
     arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_59d53] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o] ==> ignore
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
-    arg [-L/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
+    arg [cmTC_123a7] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crt1.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crti.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtbegin.o] ==> ignore
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
+    arg [-L/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/opt/vc/lib] ==> ignore
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> ignore
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> ignore
     arg [-rpath-link] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib] ==> ignore
-    arg [CMakeFiles/cmTC_59d53.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/local/lib] ==> ignore
+    arg [CMakeFiles/cmTC_123a7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -262,283 +392,15 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o] ==> ignore
-    arg [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o] ==> ignore
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
-  collapse library dir [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0/crtend.o] ==> ignore
+    arg [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf/crtn.o] ==> ignore
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib] ==> [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;/home/epepi/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
+  implicit dirs: [/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/lib/gcc/arm-raspbian-linux-gnueabihf/8.3.0;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib/arm-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/lib;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib/arm-linux-gnueabihf;/home/vincent/arm-cross-comp-env/arm-raspbian-linux-gnueabihf/arm-raspbian-linux-gnueabihf/sysroot/usr/lib]
   implicit fwks: []
 
 
-
-
-Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_181ec"
-[1/2] Building CXX object CMakeFiles/cmTC_181ec.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_181ec
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_b2df6"
-[1/2] Building CXX object CMakeFiles/cmTC_b2df6.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_b2df6
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_1da89"
-[1/2] Building CXX object CMakeFiles/cmTC_1da89.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_1da89
-
-
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:0cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:0cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:0cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:0cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:0cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:0cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/epepi/setr/lab5setr/laboratoire-5-pi/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/ninja" "cmTC_ad21a"
-[1/2] Building CXX object CMakeFiles/cmTC_ad21a.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_ad21a
-
-
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:0cxx_alias_templates
-    Feature record: CXX_FEATURE:0cxx_alignas
-    Feature record: CXX_FEATURE:0cxx_alignof
-    Feature record: CXX_FEATURE:0cxx_attributes
-    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:0cxx_auto_type
-    Feature record: CXX_FEATURE:0cxx_binary_literals
-    Feature record: CXX_FEATURE:0cxx_constexpr
-    Feature record: CXX_FEATURE:0cxx_contextual_conversions
-    Feature record: CXX_FEATURE:0cxx_decltype
-    Feature record: CXX_FEATURE:0cxx_decltype_auto
-    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:0cxx_default_function_template_args
-    Feature record: CXX_FEATURE:0cxx_defaulted_functions
-    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:0cxx_delegating_constructors
-    Feature record: CXX_FEATURE:0cxx_deleted_functions
-    Feature record: CXX_FEATURE:0cxx_digit_separators
-    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:0cxx_explicit_conversions
-    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:0cxx_extern_templates
-    Feature record: CXX_FEATURE:0cxx_final
-    Feature record: CXX_FEATURE:0cxx_func_identifier
-    Feature record: CXX_FEATURE:0cxx_generalized_initializers
-    Feature record: CXX_FEATURE:0cxx_generic_lambdas
-    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:0cxx_inline_namespaces
-    Feature record: CXX_FEATURE:0cxx_lambdas
-    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:0cxx_local_type_template_args
-    Feature record: CXX_FEATURE:0cxx_long_long_type
-    Feature record: CXX_FEATURE:0cxx_noexcept
-    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:0cxx_nullptr
-    Feature record: CXX_FEATURE:0cxx_override
-    Feature record: CXX_FEATURE:0cxx_range_for
-    Feature record: CXX_FEATURE:0cxx_raw_string_literals
-    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:0cxx_return_type_deduction
-    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:0cxx_rvalue_references
-    Feature record: CXX_FEATURE:0cxx_sizeof_member
-    Feature record: CXX_FEATURE:0cxx_static_assert
-    Feature record: CXX_FEATURE:0cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:0cxx_thread_local
-    Feature record: CXX_FEATURE:0cxx_trailing_return_types
-    Feature record: CXX_FEATURE:0cxx_unicode_literals
-    Feature record: CXX_FEATURE:0cxx_uniform_initialization
-    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:0cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
-    Feature record: CXX_FEATURE:0cxx_variadic_macros
-    Feature record: CXX_FEATURE:0cxx_variadic_templates

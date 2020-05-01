@@ -6,9 +6,6 @@
 int main(int argc, char **argv){
     int c;
     int long_index = 0;
-    int debugFlag = 0;
-    const char *audioFileInDebug = "haba.wav";
-    const char *audioFileEncodedDebug = "./music/audioEncode.out";
     const char *audioFilesDir = "./music";
     static struct option long_options[] =
         {
@@ -21,7 +18,6 @@ int main(int argc, char **argv){
         switch (c)
         {
         case 'z':
-            debugFlag = 1;
             break;
         default:
             fprintf(stderr, "Unknown arg %s \n", optarg);
@@ -31,14 +27,13 @@ int main(int argc, char **argv){
     }
 
     int client, sock;
-    ret_t ret;
-    ret.success =0;
-    strcpy(ret.audioFile, "./music/");
     struct sockaddr_rc addr;
     //asking what does the client wants
     initBlueServer(&sock, &addr);
-    while (ret.success == 0)
+    while (1)
     {
+        ret_t ret;
+        strcpy(ret.audioFile, "./music/");
         waitForConnection(&sock, &client, &addr);
         serveClient(&client, &ret);
         switch (ret.requestType)
@@ -47,10 +42,12 @@ int main(int argc, char **argv){
             listAudioFiles(audioFilesDir, client);
             break;
         case 1:
-            playAudioFile(client, &ret); //ret.success is set here
+            playAudioFile(client, &ret, 0);
+            goto end;
             break;
         case 2:
             encodeAndFilter(&ret);
+            write(client, "OK", 3);
             break;
         default:
             perror("unknown ret from serveClient");
@@ -58,6 +55,7 @@ int main(int argc, char **argv){
             break;
         }
     }
+    end:
     close(sock);
     //free(filterName);
     printf("completed \n");

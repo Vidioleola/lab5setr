@@ -62,7 +62,7 @@ typedef struct wavfile_header_s
 
 typedef struct Sync
 {
-    char buff[MAX_BUFFER_PACKETS][PACKETS_SIZE];
+    uchar buff[MAX_BUFFER_PACKETS][PACKETS_SIZE];
     int writer;
     int reader;
     int sock;
